@@ -501,7 +501,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">43</span>
+										<span class="site-state-item-count">27</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -513,7 +513,7 @@
 								</div>      
 								<div class="site-state-item site-state-tags">
 									<a data-toggle="modal" data-target="#blog_tags">
-										<span class="site-state-item-count">17</span>
+										<span class="site-state-item-count">0</span>
 										<span class="site-state-item-name">标签</span>
 									</a>
 								</div>
@@ -562,7 +562,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/Argon/" rel="tag">Argon <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/EPON/" rel="tag">EPON <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/FakeGeek/" rel="tag">FakeGeek <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/tags/INTERNET/" rel="tag">INTERNET <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/MU/" rel="tag">MU <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/MW325R/" rel="tag">MW325R <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/N12/" rel="tag">N12 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Uncategorized/" rel="tag">Uncategorized <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/WebMaster/" rel="tag">WebMaster <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/WordPress/" rel="tag">WordPress <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E4%B8%BB%E9%A2%98/" rel="tag">主题 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8C%BF%E5%90%8D/" rel="tag">匿名 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8D%81%E5%AD%97%E8%A1%97/" rel="tag">十字街 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈 <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E8%81%8A%E5%A4%A9%E5%AE%A4/" rel="tag">聊天室 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/" rel="tag">路由器 <span class="tag-num">1</span></a>
+				
 			</div>
 		</div>
 	</div>
@@ -576,345 +576,13 @@
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2023/04/28/%E2%80%9C%E6%8A%98%E8%85%BE%E2%80%9D%E8%B7%AF%E7%94%B1%E5%99%A8%E7%B3%BB%E5%88%97%EF%BC%881%EF%BC%89/">“折腾”路由器系列（1）</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-29 1:08:00 | 编辑于 2024-5-18 6:56:23">2023-4-29 1:08
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							948 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							3 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				<p>众所周知，H3C N12是最便宜的全千兆无线路由器。这款路由器给我的第一印象就是快。为什么说他快呢？你连上H3C_5G就知道了，只要您的手机支持5G频段的WIFI，速度快到飞起，搭配PT921网关，实测最高速度50Mbps，不过这对没钱人也是很友好的啦，毕竟100多的路由器，你也不能要求太多。如果不是经济限制，我会选择TP-LINK的路由器，可玩性比H3C N12高。</p>
-<p>好啦好啦，回归正题，如果你手上还有其他过时的路由器，你可以进入后台看看他支不支持无线桥接（中继），如果支持的话，你可以继续往下看了。我这里以MERCURY MW325R为例来给大家演示，这种方法也可以让你合法的蹭邻居WIFI(WLAN)。</p>
-<p>首先，我们要先激活H3C N12（已经激活的跳过）。进入后台，点击最底下的专业版，安全专区，防蹭网，勾选“自动将攻击设备加入禁止接入列表”，点击应用。再点击安全专区下的防攻击，将“丢弃攻击报文，不记入日志”改成“丢弃攻击报文，并记入日志”，最后把防范等级改成高级。如果你的周围还有一堆WIFI信号，那你可以把无线设置，智能网络设置，勾选“启用TDMA-Dig”，应用。之后进入简化版，重启设备。主路由器这边完工。</p>
-<p>现在来到你的旧路由器这边。你记得先看看手机能不能收到主路由器的信号，最好在信号两格左右的地方插上旧路由器，然后按住reset键恢复出厂设置，MW325R、MW300R这些有好多灯的路由器灯全部亮了就可以放手了，MW313R、H3C N12这种只有一个灯的路由器按到灯开始闪烁了就可以放手了。之后连接旧路由器，设置完管理员密码后直接点跳过，来到高级设置，LAN口设置，LAN口IP设置改为手动，如果你没有故意去更改H3C N12的IP地址的话，那么你要把旧路由器的LAN口IP设置成192.168.124.252，252可以改成你喜欢也不会造成冲突的IP地址。改完以后点保存，重新连接旧路由器，输入你设置的IP，输入你设置的后台管理员密码，点高级设置，无线设置，WDS无线桥接，下一步，选择N12的WIFI名称，输入密码，然后旧路由器就开始和N12通信了。这个时候你如果是通过WIFI连接旧路由器的，那么你应该卡在正在连接。现在就让他卡着，你来到N12旁边，连接N12。如果你还是卡在这里，刷新一下，重新输入管理员密码，高级设置，DHCP服务器这边，打开DHCP，其他啥也别动，保存。然后到设备管理，重启路由器，重启路由器，重启完以后，来到旧路由器那边，连上旧路由器，访问moshujia.cn，如果进的去，恭喜你，桥接成功。</p>
-<p>这个时候你的旧路由器变成了一个WIFI放大器，如果你的旧路由器以前带4个人都费劲，现在就看主路由器的心情了，如果主路由器厉害，可以带100个人，那么这台路由器也可以带100个人，因为他只负责信号放大，不负责处理网络，压力全在主路由器那边。在我这里N12带10台设备上网没啥压力，不知道你们那边怎么样，有任何问题可以在评论区提出来。</p>
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2023/04/28/%E7%BB%99%E7%8F%AD%E9%95%BF%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1/">给班长的一封信</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-28 13:27:38 | 编辑于 2024-5-18 6:56:23">2023-4-28 13:27
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							481 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				<p>亲爱的班长：</p>
-<p>你好！</p>
-<p>感谢你给我写的那些信，虽然只有短短几封，但是我还是感受到你的关爱。</p>
-<p>那次放学，我们三位被老师留下来做作业了。前面的都很顺利，可到了后面，就显得异常困难，整整花了我两个半小时也没写出来。正当我“山穷水尽疑无路”，你从我的身边走过。“班长，班长……”“干什么，快说”“我这道题不会，你帮帮我行不行？”“就这你也不会？”即使您有点不耐烦了，您还是认真得讲给我解题思路。经过您的讲解，我便“柳暗花明又一村”啊！感谢班长您的帮助，让我学会了这道题。</p>
-<p>还有一次，在四年级，我和同学们一起打篮球。别的同学都能投进篮筐，可是我无论如何也投不进去。正当我准备放弃时，您走了过来。“怎么了RHX？”“我偷懒投不进去啊，怎么办？”“多练习不就行了，你看看那些NBA运动员，至少练习了一年，我相信，只要你肯努力，你一定打得好篮球的！”从此，我便开始了刻苦的练习。渐渐的，一个，两个，三个，我越来越轻松了。到了两年半后的今天，我可以和您相提并论了。感谢你的鼓励，让我学会了打篮球。</p>
-<p>班长啊班长，谢谢你这么多年来给我的鼓励，让我拥有了今天的成就。如今我们毕业，要分开了，我希望在以后的日子里，我们还可以再联系。</p>
-<p>祝：<br />
-一帆风顺</p>
-<pre><code>                               你永远的朋友：RHX
-                               2023/4/27</code></pre>
-<hr />
-<p>温馨提示：这是我写的作文，你可以套用，请一定要修改内容，不然会被发现o。<br />
-TIP：如果有什么好的意见，可以在评论区提出，谢谢！</p>
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center post-header-with-thumbnail">
-		
-				<img class='post-thumbnail lazyload' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//PwNAgAEACPwC/tuiTRYAAAAASUVORK5CYII=' data-original='https://em.imesl.eu.org/content/uploadfile/202304/thum-4f6c1682589738.png' alt='thumbnail'></img>
-				<div class='post-header-text-container'>
-			
-		<a class="post-title" href="/2023/04/27/%E4%BB%8A%E5%A4%A9%E8%A2%AB%E5%8F%AB%E5%8E%BB%E5%96%9D%E8%8C%B6%E4%BA%86/">今天被叫去喝茶了</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-27 12:00:12 | 编辑于 2024-5-18 6:56:23">2023-4-27 12:00
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							190 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-				</div>
-			
-	</header>
-
-	<div class="post-content">
-		
-			
-				<p>废话不说，先看图片：</p>
-<p><a target="_blank" rel="noopener" href="https://em.imesl.eu.org/content/uploadfile/202304/4f6c1682589738.png"><img src="https://em.imesl.eu.org/content/uploadfile/202304/thum-4f6c1682589738.png" alt="" /></a></p>
-<p><a target="_blank" rel="noopener" href="https://em.imesl.eu.org/content/uploadfile/202304/2f891682589738.png"><img src="https://em.imesl.eu.org/content/uploadfile/202304/thum-2f891682589738.png" alt="" /></a></p>
-<p><a target="_blank" rel="noopener" href="https://em.imesl.eu.org/content/uploadfile/202304/76641682589740.png"><img src="https://em.imesl.eu.org/content/uploadfile/202304/thum-76641682589740.png" alt="" /></a></p>
-<p>（暴露QQ和真实姓名了）</p>
-<p>好吧，听我慢慢说。</p>
-<p>今天我们做考卷做完了要去校长办公室交，对不对？刚好我们三个啥也不会，一脸懵逼得拿下去了，刚喊了声报告，好戏就来了。</p>
-<p>校长：来来来坐下，做得很累我给你们泡茶喝。<br />
-我：（wc还真泡）老师我作业还没写完呢，我先去写作业吧。（说完我就跑了）</p>
-<p>剩下两个同学也陆续回到班级里了。然后因为这件事笑了个半死，毕竟考不好就是请家长来喝了。</p>
-<p>话说你们有没有遇到过去办公室喝茶是真喝这回事？有的话评论区见。</p>
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2023/04/26/%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A5%BD/">到底是什么数据库好</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-26 12:45:28 | 编辑于 2024-5-18 6:56:23">2023-4-26 12:45
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							241 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				<p>Hi，我又来给大家更新了。</p>
-<p>这次的内容是，什么数据库好。</p>
-<p>我用过三种数据库：MySQL,PostgreSQL,SQLite</p>
-<p>如果让我推荐，我会推荐MySQL，好多网站程序对MySQL都非常的友好，比如WordPress，简直就是数据全放MySQL里面。只要数据库还在，网站程序扔了也罢。而且好多免费主机用的都是MySQL，对小白非常友好。</p>
-<p>PostgreSQL不知道是不是我的环境有问题，刚开了个新库就快要8MB了，而且我用的网站程序就Z-Blog支持PostgreSQL，免费主机不支持。</p>
-<p>SQLite也不是说不能用，但是你如果想迁移的话就会麻烦死掉，比如@你好的博客，因为一时的方便用SQLite，结果今天要迁移只能忍痛放弃以前的文章，要是企业还得了。。。</p>
-<p>以上仅属于我的个人观点，有错误请在评论区指出，散会。</p>
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2023/04/23/%E8%BF%99%E4%B8%AA%E6%96%87%E7%AB%A0%E5%8F%AF%E8%83%BD%E4%BC%9A%E8%AE%A9%E6%88%91%E6%B2%A1/">这个文章可能会让我没</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-23 13:28:11 | 编辑于 2024-5-18 6:56:23">2023-4-23 13:28
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							649 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				<blockquote>
-<p>现在的家长是真的离谱，为什么这么说呢？请听我娓娓道来</p>
-</blockquote>
-<p>我有一个朋友，在2020年的时候认识的。当时我们在线下玩的很欢，他说的我也很感兴趣，我说的他也喜欢听，他也教会了我许多东西，比如Android刷机的高级玩法，那个时候我都会给手机写ROM了。我直接抛开了我那又卡又难用的YunOS盒子，玩刷机去了。</p>
-<p>结果呢我的家长发现我玩手机玩的很666了，比玩游戏的都6。好，不准玩手机了。</p>
-<p>就这样过了几天，那位朋友又来找我了，教我玩电视。我直接装上LeStore,Chrome一批东西。这下好了，变成平板了。我又开始玩了。</p>
-<p>好日子没过多久，家长发现我又会玩电视了，电视也不让看了。还对我一顿精神攻击，比杨教授都NB，整整说了半年，差点就被洗脑了。</p>
-<p>那时还在2020/8，现在已经2021/11了，我又可以看电视了，这下玩VP分销和灰狼EP。</p>
-<p>2021/12，玩lunchpad的免费云，windowsserver2012r2。</p>
-<p>过了一个月，人家停服了2022/1</p>
-<p>2022/2 蔬菜云</p>
-<p>2022/4 火龙果</p>
-<p>2022/3~2022/7，创业，没有经验，跑路了，群还在。</p>
-<p>2022/8 拿出D70G3，512mb+8gb，安卓4.0.4，玩mc-kkk.top，到了2022/10，看见我是真牛逼了，也给你收了。其实玩MC2020年就开始了，就是没有设备。</p>
-<p>2022/12，第一次和云搞正式合作，我家长看见我挺牛逼了，2023/1因为网络原因我不得不解除合作。为什么网络会没呢，就是想让我解除合作。反正我也被人取代了。</p>
-<p>2023年开始就不讲武德了，开始搞死我了。</p>
-<p>上次我要剪一个视频，我花了好多心血，好不容易渲染完，他直接素材连成果一起给我删了。</p>
-<p>30天写的一个快要上市的系统，快要完工时，本地源码和成果删了就算了，我github和网盘备份也给你删了。你知道我花了多少心血吗？</p>
-<p>我的博客esoela的那个，买通主机商把我主机连同异地备份都删了，那些心血没了。</p>
-<p>无语死掉，还有好多没举出来，今年六月份我被逼退网了，如果我还在的话，珍惜吧</p>
-<p>202/4/23:那位大佬被拉去洗脑了，没了，不能再带我了。</p>
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
 		<a class="post-title" href="/2023/04/17/PHP%E6%98%BE%E7%A4%BAIP%E7%9A%84%E4%BB%A3%E7%A0%81/">PHP显示IP的代码</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-17 15:50:08 | 编辑于 2024-5-18 6:56:23">2023-4-17 15:50
+							<time title="发布于 2023-4-17 15:50:08 | 编辑于 2024-5-18 7:25:26">2023-4-17 15:50
 							</time>
 						</div>
 					
@@ -1049,7 +717,7 @@ echo $onlineip;</code></pre>
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-17 15:05:55 | 编辑于 2024-5-18 6:56:23">2023-4-17 15:05
+							<time title="发布于 2023-4-17 15:05:55 | 编辑于 2024-5-18 7:25:26">2023-4-17 15:05
 							</time>
 						</div>
 					
@@ -1112,7 +780,7 @@ echo $onlineip;</code></pre>
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-15 2:24:17 | 编辑于 2024-5-18 6:56:23">2023-4-15 2:24
+							<time title="发布于 2023-4-15 2:24:17 | 编辑于 2024-5-18 7:25:26">2023-4-15 2:24
 							</time>
 						</div>
 					
@@ -1212,7 +880,7 @@ Hello,ThePiationESL This Progrem by Cat
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-14 12:30:07 | 编辑于 2024-5-18 6:56:23">2023-4-14 12:30
+							<time title="发布于 2023-4-14 12:30:07 | 编辑于 2024-5-18 7:25:26">2023-4-14 12:30
 							</time>
 						</div>
 					
@@ -1274,7 +942,7 @@ Hello,ThePiationESL This Progrem by Cat
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-9 10:29:40 | 编辑于 2024-5-18 6:56:23">2023-4-9 10:29
+							<time title="发布于 2023-4-9 10:29:40 | 编辑于 2024-5-18 7:25:26">2023-4-9 10:29
 							</time>
 						</div>
 					
@@ -1342,8 +1010,118 @@ Hello,ThePiationESL This Progrem by Cat
 </article>
 
 
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2023/04/07/%E4%BD%A0%E5%A5%BD%C2%B7%E5%8D%9A%E5%AE%A2/">你好·博客</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-4-8 3:42:01 | 编辑于 2024-5-18 7:25:26">2023-4-8 3:42
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							0 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
 
-<nav><ul class="pagination"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/2/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/">1</a></li><li class="page-item"><a class="page-link" href="/page/2/">2</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">3</span></li><li class="page-item"><a class="page-link" href="/page/4/">4</a></li><li class="page-item"><a class="page-link" href="/page/5/">5</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/4/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/2/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/">1</a></li><li class="page-item"><a class="page-link" href="/page/2/">2</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">3</span></li><li class="page-item"><a class="page-link" href="/page/4/">4</a></li><li class="page-item"><a class="page-link" href="/page/5/">5</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/4/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav>
+	<div class="post-content">
+		
+			
+				
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2023/04/03/%E6%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8emlog/">欢迎使用emlog</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-4-3 14:50:38 | 编辑于 2024-5-18 7:25:26">2023-4-3 14:50
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							38 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				<p>恭喜您成功安装了emlog，这是系统自动生成的演示文章。编辑或者删除它，然后开始您的创作吧！</p>
+			
+		
+	</div>
+
+	
+</article>
+
+
+
+<nav><ul class="pagination"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/2/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/">1</a></li><li class="page-item"><a class="page-link" href="/page/2/">2</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">3</span></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/2/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/">1</a></li><li class="page-item"><a class="page-link" href="/page/2/">2</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">3</span></li></ul></nav>
 
 
 		

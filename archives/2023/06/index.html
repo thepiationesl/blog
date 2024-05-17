@@ -510,7 +510,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">43</span>
+										<span class="site-state-item-count">27</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -522,7 +522,7 @@
 								</div>      
 								<div class="site-state-item site-state-tags">
 									<a data-toggle="modal" data-target="#blog_tags">
-										<span class="site-state-item-count">17</span>
+										<span class="site-state-item-count">0</span>
 										<span class="site-state-item-name">标签</span>
 									</a>
 								</div>
@@ -571,7 +571,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/Argon/" rel="tag">Argon <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/EPON/" rel="tag">EPON <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/FakeGeek/" rel="tag">FakeGeek <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/tags/INTERNET/" rel="tag">INTERNET <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/MU/" rel="tag">MU <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/MW325R/" rel="tag">MW325R <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/N12/" rel="tag">N12 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Uncategorized/" rel="tag">Uncategorized <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/WebMaster/" rel="tag">WebMaster <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/WordPress/" rel="tag">WordPress <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E4%B8%BB%E9%A2%98/" rel="tag">主题 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8C%BF%E5%90%8D/" rel="tag">匿名 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8D%81%E5%AD%97%E8%A1%97/" rel="tag">十字街 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈 <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E8%81%8A%E5%A4%A9%E5%AE%A4/" rel="tag">聊天室 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/" rel="tag">路由器 <span class="tag-num">1</span></a>
+				
 			</div>
 		</div>
 	</div>
@@ -593,7 +593,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-6-28 0:42:00 | 编辑于 2024-5-18 6:56:23">2023-6-28 0:42
+							<time title="发布于 2023-6-28 0:42:00 | 编辑于 2024-5-18 7:25:26">2023-6-28 0:42
 							</time>
 						</div>
 					
@@ -650,7 +650,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-6-25 3:56:00 | 编辑于 2024-5-18 6:56:23">2023-6-25 3:56
+							<time title="发布于 2023-6-25 3:56:00 | 编辑于 2024-5-18 7:25:26">2023-6-25 3:56
 							</time>
 						</div>
 					
@@ -705,7 +705,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-6-25 0:50:00 | 编辑于 2024-5-18 6:56:23">2023-6-25 0:50
+							<time title="发布于 2023-6-25 0:50:00 | 编辑于 2024-5-18 7:25:26">2023-6-25 0:50
 							</time>
 						</div>
 					
@@ -724,7 +724,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							235 字
+							231 字
 						</div>
 					
 						
@@ -742,21 +742,7 @@
 	<div class="post-content">
 		
 			
-				<p>小张也是太聪明了，他难道不知道我去翻了他的仓库吗，写着AutoBan 23 ＆质子，所以我没有去升级。</p>
-<p>原代码：</p>
-<pre><code class="language-javascript">if (data.nick === '质子' || data.nick.startsWith('23')) {
-    server.reply({
-      cmd: 'warn',
-      text: `尊敬的用户，您好！
-        根据中华人民共和国网络部门有关规定，同时为了保护您的身心健康，我司决定于2023年6月11日正式启用小学生防沉迷模块。
-        根据防沉迷模块的检测结果，您的操作已被自动取消。
-        感谢您对我们的大力支持，祝您生活愉快！`
-    },socket)
-    server.ban(socket.address)    // ban
-    return socket.terminate()
-  }</code></pre>
-<p>新代码不要看了，我删了。</p>
-<p>因为我没有经过授权把他的聊天室改了，所以我就不发了，比如client.js的文明用语我全部换了，前后端分离我也弄了，效果嘛，<a target="_blank" rel="noopener" href="https://em.imesl.eu.org:31106/">https://em.imesl.eu.org:31106/</a></p>
+				<p>小张也是太聪明了，他难道不知道我去翻了他的仓库吗，写着AutoBan 23 ＆质子，所以我没有去升级。 原代码： ```javascript if (data.nick === '质子' || data.nick.startsWith('23')) { server.reply({ cmd: 'warn', text: `尊敬的用户，您好！ 根据中华人民共和国网络部门有关规定，同时为了保护您的身心健康，我司决定于2023年6月11日正式启用小学生防沉迷模块。 根据防沉迷模块的检测结果，您的操作已被自动取消。 感谢您对我们的大力支持，祝您生活愉快！` },socket) server.ban(socket.address) // ban return socket.terminate() } ``` 新代码不要看了，我删了。 因为我没有经过授权把他的聊天室改了，所以我就不发了，比如client.js的文明用语我全部换了，前后端分离我也弄了，效果嘛，https://em.imesl.eu.org:31106/</p>
 			
 		
 	</div>
@@ -774,7 +760,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-6-24 1:35:00 | 编辑于 2024-5-18 6:56:23">2023-6-24 1:35
+							<time title="发布于 2023-6-24 1:35:00 | 编辑于 2024-5-18 7:25:26">2023-6-24 1:35
 							</time>
 						</div>
 					
@@ -793,7 +779,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							602 字
+							601 字
 						</div>
 					
 						
@@ -811,24 +797,7 @@
 	<div class="post-content">
 		
 			
-				<p>你以后可以不把WLAN密码和WI-FI密码给你的邻居了，你永远也不知道，他究竟要干什么。</p>
-<pre><code>    日期时间    级别  信息来源    信息内容
-    2023-06-24 07:38:17 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:38:12 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:38:06 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:38:01 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:37:56 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:37:51 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:37:46 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:37:41 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:37:36 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:37:31 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:37:26 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:37:21 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:37:16 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:37:11 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。
-    2023-06-24 07:37:06 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将</code></pre>
-<p>好家伙，icmp攻击，谁能帮我友好的除掉这个邻居，评论区留言一下，这邻居刚刚把我路由器打的文章都保存不了了</p>
+				<p>你以后可以不把WLAN密码和WI-FI密码给你的邻居了，你永远也不知道，他究竟要干什么。 ``` 日期时间 级别 信息来源 信息内容 2023-06-24 07:38:17 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:38:12 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:38:06 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:38:01 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:37:56 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:37:51 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:37:46 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:37:41 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:37:36 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:37:31 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:37:26 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:37:21 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:37:16 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:37:11 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。 2023-06-24 07:37:06 warning 安全 设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将 ``` 好家伙，icmp攻击，谁能帮我友好的除掉这个邻居，评论区留言一下，这邻居刚刚把我路由器打的文章都保存不了了</p>
 			
 		
 	</div>
@@ -846,7 +815,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-6-24 1:20:00 | 编辑于 2024-5-18 6:56:23">2023-6-24 1:20
+							<time title="发布于 2023-6-24 1:20:00 | 编辑于 2024-5-18 7:25:26">2023-6-24 1:20
 							</time>
 						</div>
 					
@@ -883,14 +852,7 @@
 	<div class="post-content">
 		
 			
-				<p>众所周知，QQ这东西删除了好友就要重新加，所以你可以试试http://huifu.qq.com/</p>
-<p>原文：<br />
-QQ软件好友恢复的类型有哪些？<br />
-1、双向删除的好友：双向删除的好友，您的好友列表中没有对方，对方好友列表中也没有您，如果是您主动删除的对方，您去恢复后，对方回到您的“我恢复的好友”列表中，但是不能同时恢复对方的好友列表，您成为对方的单向好友；<br />
-2、拉到黑名单的好友：将好友拉到黑名单的操作将导致在自己的好友列表中删除对方，并且同时在对方的好友列表中删除自己，系统只能恢复前一种影响，即可以恢复对方到您的好友列表我恢复的好友”中，但是不能同时恢复对方的好友列表，您恢复后会成为对方的单项好友，出现在对方的陌生人中。被删除（被拉黑）方无法去进行好友恢复；<br />
-3、您操作好友恢复后，不管此时对方好友列表中是否有您的QQ，也就是说无论之前进行的是单向删除还是双向删除或者拉黑，系统都会自动给对方发送一个好友添加请求的验证消息，若此时对方好友列表中没有您，那么对方可以同时也添加您为好友；<br />
-4、当对方的好友添加验证设置为“允许任何人”和“需要验证消息”的情况下会给对方发送好友验证，若设置的其他几项则默认不发送验证消息。</p>
-<p>温馨提示：我们已经对好友恢复进行过优化改进，目前删除好友后立即就可以登录http://huifu.qq.com/进行恢复操作，并且操作好友恢复后重新登录QQ即可查看。</p>
+				<p>众所周知，QQ这东西删除了好友就要重新加，所以你可以试试http://huifu.qq.com/ 原文： QQ软件好友恢复的类型有哪些？ 1、双向删除的好友：双向删除的好友，您的好友列表中没有对方，对方好友列表中也没有您，如果是您主动删除的对方，您去恢复后，对方回到您的&ldquo;我恢复的好友&rdquo;列表中，但是不能同时恢复对方的好友列表，您成为对方的单向好友； 2、拉到黑名单的好友：将好友拉到黑名单的操作将导致在自己的好友列表中删除对方，并且同时在对方的好友列表中删除自己，系统只能恢复前一种影响，即可以恢复对方到您的好友列表我恢复的好友&rdquo;中，但是不能同时恢复对方的好友列表，您恢复后会成为对方的单项好友，出现在对方的陌生人中。被删除（被拉黑）方无法去进行好友恢复； 3、您操作好友恢复后，不管此时对方好友列表中是否有您的QQ，也就是说无论之前进行的是单向删除还是双向删除或者拉黑，系统都会自动给对方发送一个好友添加请求的验证消息，若此时对方好友列表中没有您，那么对方可以同时也添加您为好友； 4、当对方的好友添加验证设置为&ldquo;允许任何人&rdquo;和&ldquo;需要验证消息&rdquo;的情况下会给对方发送好友验证，若设置的其他几项则默认不发送验证消息。 温馨提示：我们已经对好友恢复进行过优化改进，目前删除好友后立即就可以登录http://huifu.qq.com/进行恢复操作，并且操作好友恢复后重新登录QQ即可查看。</p>
 			
 		
 	</div>
@@ -908,7 +870,7 @@ QQ软件好友恢复的类型有哪些？<br />
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-6-11 14:17:00 | 编辑于 2024-5-18 6:56:23">2023-6-11 14:17
+							<time title="发布于 2023-6-11 14:17:00 | 编辑于 2024-5-18 7:25:26">2023-6-11 14:17
 							</time>
 						</div>
 					
@@ -963,7 +925,7 @@ QQ软件好友恢复的类型有哪些？<br />
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-6-1 14:48:00 | 编辑于 2024-5-18 6:56:23">2023-6-1 14:48
+							<time title="发布于 2023-6-1 14:48:00 | 编辑于 2024-5-18 7:25:26">2023-6-1 14:48
 							</time>
 						</div>
 					
