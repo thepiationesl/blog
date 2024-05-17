@@ -15,6 +15,658 @@
     </entry>
     
     
+    
+    <entry>
+      <title>如何优化国内Debian服务器（仅限于站长）</title>
+      <link href="/2024/01/19/%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96%E5%9B%BD%E5%86%85Debian%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E4%BB%85%E9%99%90%E4%BA%8E%E7%AB%99%E9%95%BF%EF%BC%89/"/>
+      <url>/2024/01/19/%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96%E5%9B%BD%E5%86%85Debian%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E4%BB%85%E9%99%90%E4%BA%8E%E7%AB%99%E9%95%BF%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<p>操作系统： Debian 11 Core</p><p>第一件事，换源。</p><p>众所周知，Debian默认的源在国内是真的慢，为了防止太慢耽误时间，所以我们要把它换成腾讯源，代码如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure><p>然后把内容替换成：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">deb https://mirrors.tencent.com/debian/ bullseye main non-free contrib</span><br><span class="line"># deb-src https://mirrors.tencent.com/debian/ bullseye main non-free contrib</span><br><span class="line">deb https://mirrors.tencent.com/debian-security/ bullseye-security main</span><br><span class="line"># deb-src https://mirrors.tencent.com/debian-security/ bullseye-security main</span><br><span class="line">deb https://mirrors.tencent.com/debian/ bullseye-updates main non-free contrib</span><br><span class="line"># deb-src https://mirrors.tencent.com/debian/ bullseye-updates main non-free contrib</span><br><span class="line">deb https://mirrors.tencent.com/debian/ bullseye-backports main non-free contrib</span><br><span class="line"># deb-src https://mirrors.tencent.com/debian/ bullseye-backports main non-free contrib</span><br></pre></td></tr></table></figure><p>最后执行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt update -y</span><br></pre></td></tr></table></figure><p>第二件事，修改 ~&#x2F;.vimrc</p><p>众所周知，vim这玩意编辑中文会乱码，为了防止它乱码导致我没兴趣改，所以我们要编辑 ~&#x2F;.vimrc让他支持中文：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set termencoding=utf-8</span><br><span class="line">set encoding=utf8</span><br><span class="line">set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030</span><br></pre></td></tr></table></figure><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2024年第一次更新</title>
+      <link href="/2024/01/06/2024%E5%B9%B4%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9B%B4%E6%96%B0/"/>
+      <url>/2024/01/06/2024%E5%B9%B4%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9B%B4%E6%96%B0/</url>
+      
+        <content type="html"><![CDATA[<p>有点可惜没在2023年最后一天写一篇文章。</p><p>说正题吧，我们的期末考试时间是1月29号到1月31号，按我写这篇文章算起来的话就剩三个礼拜了。期中考成绩不太理想，但是期末考试又会更难，所以，得去备考了</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>更新</title>
+      <link href="/2023/12/30/%E6%9B%B4%E6%96%B0/"/>
+      <url>/2023/12/30/%E6%9B%B4%E6%96%B0/</url>
+      
+        <content type="html"><![CDATA[<p>为了防止大家觉得我没了，我特意来更新一下。</p><p>首先再次申明，我现在没有电视终端了，而且我是2023级初中寄宿生，平时基本不上线，所以这个博客就变成一个死博客了，不过你们可以一个月来一次，可能会更新</p><p>对了，做个记录。前段时间我不是一直想开mcpe0.14.3服务器嘛，刚好适用于Linux的pmmpPHP7.2也找到了，GPE服务端，目前我只找到了登录和空岛插件，你们如果想要的话我可以给你们，Windows和Linux我都有。</p><p>顺便说一下，穿透PE&#x2F;基岩客户端记得选择udp协议，而且远程端口要和本地端口统一，不然会连不上。我就是因为折腾这个折腾了几个礼拜，后面偶然刷到了一篇文章才成功的</p><p>对了，我帮我朋友打个广告：</p><h1 id="2b2t-eo-mk-1-20及以上-无规则无政府-小型服务器"><a href="#2b2t-eo-mk-1-20及以上-无规则无政府-小型服务器" class="headerlink" title="2b2t.eo.mk 1.20及以上 无规则无政府 小型服务器"></a>2b2t.eo.mk 1.20及以上 无规则无政府 小型服务器</h1><p>QQ交流群:881271513</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>这可能是我最屈辱的文章了</title>
+      <link href="/2023/11/18/%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%E6%88%91%E6%9C%80%E5%B1%88%E8%BE%B1%E7%9A%84%E6%96%87%E7%AB%A0%E4%BA%86/"/>
+      <url>/2023/11/18/%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%E6%88%91%E6%9C%80%E5%B1%88%E8%BE%B1%E7%9A%84%E6%96%87%E7%AB%A0%E4%BA%86/</url>
+      
+        <content type="html"><![CDATA[<p>我需要有人赞助一台服务器，只要是国外的，无限流量的都可以。  </p><p>我需要他搞ZhangChat，并对其进行修改，无限流量是为了防止人太多把服务器流量打完，国外的是因为国内要备案，配置多低都可以，只要能正常跑 node.js和ZhangChat 就可以了。联系邮箱： <a href="mailto:&#101;&#115;&#x6c;&#120;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x73;&#97;">&#101;&#115;&#x6c;&#120;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x73;&#97;</a>。</p><p>好吧，肯定没有人会无偿捐赠的，我就摆在这里这个样子，毕竟谁会来无偿捐赠我呢。</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>马上就要期中考了</title>
+      <link href="/2023/11/04/%E9%A9%AC%E4%B8%8A%E5%B0%B1%E8%A6%81%E6%9C%9F%E4%B8%AD%E8%80%83%E4%BA%86/"/>
+      <url>/2023/11/04/%E9%A9%AC%E4%B8%8A%E5%B0%B1%E8%A6%81%E6%9C%9F%E4%B8%AD%E8%80%83%E4%BA%86/</url>
+      
+        <content type="html"><![CDATA[<p>祝我考好，各位。</p><p>众所周知，语文老师笑里藏刀，看着他笑的那么灿烂，我就知道有不好的事情要发生了。</p><p>希望这一次考试不要出现这种情况了。</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>要开学了</title>
+      <link href="/2023/08/30/%E8%A6%81%E5%BC%80%E5%AD%A6%E4%BA%86/"/>
+      <url>/2023/08/30/%E8%A6%81%E5%BC%80%E5%AD%A6%E4%BA%86/</url>
+      
+        <content type="html"><![CDATA[<p>祝我好运。</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我觉得我才是SB</title>
+      <link href="/2023/07/20/%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%89%8D%E6%98%AFSB/"/>
+      <url>/2023/07/20/%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%89%8D%E6%98%AFSB/</url>
+      
+        <content type="html"><![CDATA[<p>我平时看到的只是 质子&amp;&amp;你好的其中一面啊，也许这就是传说中的好朋友吧，</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">编辑 编辑</span><br><span class="line">复制 复制</span><br><span class="line">删除 删除</span><br><span class="line">108</span><br><span class="line">236</span><br><span class="line">你好</span><br><span class="line">greeneason7@gmail.com</span><br><span class="line">221.216.228.136</span><br><span class="line">2023-07-20 08:15:56</span><br><span class="line">2023-07-20 00:15:56</span><br><span class="line">说谁谁不信是你翻译的，我就说肯定不是你翻译的</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...</span><br><span class="line">comment</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line"></span><br><span class="line">编辑 编辑</span><br><span class="line">复制 复制</span><br><span class="line">删除 删除</span><br><span class="line">109</span><br><span class="line">218</span><br><span class="line">你好</span><br><span class="line">greeneason7@gmail.com</span><br><span class="line">221.216.228.136</span><br><span class="line">2023-07-20 08:19:21</span><br><span class="line">2023-07-20 00:19:21</span><br><span class="line">什么鬼啊，说的不对，还得是看我来</span><br><span class="line">0</span><br><span class="line">spam</span><br><span class="line">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...</span><br><span class="line">comment</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line"></span><br><span class="line">编辑 编辑</span><br><span class="line">复制 复制</span><br><span class="line">删除 删除</span><br><span class="line">110</span><br><span class="line">216</span><br><span class="line">你好</span><br><span class="line">greeneason7@gmail.com</span><br><span class="line">221.216.228.136</span><br><span class="line">2023-07-20 08:20:28</span><br><span class="line">2023-07-20 00:20:28</span><br><span class="line">我买什么买啊，我看哔哩哔哩up主说的</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...</span><br><span class="line">comment</span><br><span class="line">103</span><br><span class="line">0</span><br><span class="line"></span><br><span class="line">编辑 编辑</span><br><span class="line">复制 复制</span><br><span class="line">删除 删除</span><br><span class="line">111</span><br><span class="line">212</span><br><span class="line">你好</span><br><span class="line">greeneason7@gmail.com</span><br><span class="line">221.216.228.136</span><br><span class="line">2023-07-20 08:22:59</span><br><span class="line">2023-07-20 00:22:59</span><br><span class="line">反正我知道你这是抄的</span><br><span class="line"></span><br><span class="line">print(&#x27;质子是什么&#x27;)</span><br><span class="line">0</span><br><span class="line">spam</span><br><span class="line">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...</span><br><span class="line">comment</span><br><span class="line">99</span><br><span class="line">0</span><br><span class="line"></span><br><span class="line">编辑 编辑</span><br><span class="line">复制 复制</span><br><span class="line">删除 删除</span><br><span class="line">112</span><br><span class="line">236</span><br><span class="line">质子</span><br><span class="line">qianqian20220126@163.com</span><br><span class="line">http://zhizisds.imnt.rr.nu</span><br><span class="line">222.131.14.82</span><br><span class="line">2023-07-20 08:23:13</span><br><span class="line">2023-07-20 00:23:13</span><br><span class="line">你有什么证据呢？</span><br><span class="line">0</span><br><span class="line">spam</span><br><span class="line">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...</span><br><span class="line">comment</span><br><span class="line">108</span><br><span class="line">1</span><br><span class="line"></span><br><span class="line">编辑 编辑</span><br><span class="line">复制 复制</span><br><span class="line">删除 删除</span><br><span class="line">113</span><br><span class="line">212</span><br><span class="line">你好</span><br><span class="line">greeneason7@gmail.com</span><br><span class="line">221.216.228.136</span><br><span class="line">2023-07-20 08:24:38</span><br><span class="line">2023-07-20 00:24:38</span><br><span class="line">反正代码框我会搞</span><br><span class="line">0</span><br><span class="line">spam</span><br><span class="line">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...</span><br><span class="line">comment</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line"></span><br><span class="line">编辑 编辑</span><br><span class="line">复制 复制</span><br><span class="line">删除 删除</span><br><span class="line">114</span><br><span class="line">212</span><br><span class="line">质子</span><br><span class="line">qianqian20220126@163.com</span><br><span class="line">http://zhizisds.imnt.rr.nu</span><br><span class="line">222.131.14.82</span><br><span class="line">2023-07-20 08:25:21</span><br><span class="line">2023-07-20 00:25:21</span><br><span class="line">傻逼</span><br><span class="line">0</span><br><span class="line">spam</span><br><span class="line">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...</span><br><span class="line">comment</span><br></pre></td></tr></table></figure><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PT 不发威，你当PT没了啊</title>
+      <link href="/2023/07/20/PT-%E4%B8%8D%E5%8F%91%E5%A8%81%EF%BC%8C%E4%BD%A0%E5%BD%93PT%E6%B2%A1%E4%BA%86%E5%95%8A/"/>
+      <url>/2023/07/20/PT-%E4%B8%8D%E5%8F%91%E5%A8%81%EF%BC%8C%E4%BD%A0%E5%BD%93PT%E6%B2%A1%E4%BA%86%E5%95%8A/</url>
+      
+        <content type="html"><![CDATA[<p>我先说明一下，这个博客还是在线的。 四月份此博客暂时停更，因为原域名<a href="https://bjw7.eu.org/">https://bjw7.eu.org/</a> […]</p><!-- more --><p>我先说明一下，这个博客还是在线的。</p><p>四月份此博客暂时停更，因为原域名<a href="https://bjw7.eu.org/">https://bjw7.eu.org/</a> 已经被墙了。</p><p>可是我并没有说停止更新啊，所以，万年不更新的文章，来了。</p><p>(没有后续)</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 杂谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于质子整你好这回事</title>
+      <link href="/2023/06/27/%E5%85%B3%E4%BA%8E%E8%B4%A8%E5%AD%90%E6%95%B4%E4%BD%A0%E5%A5%BD%E8%BF%99%E5%9B%9E%E4%BA%8B/"/>
+      <url>/2023/06/27/%E5%85%B3%E4%BA%8E%E8%B4%A8%E5%AD%90%E6%95%B4%E4%BD%A0%E5%A5%BD%E8%BF%99%E5%9B%9E%E4%BA%8B/</url>
+      
+        <content type="html"><![CDATA[<p>参考：<a href="http://esoela.rr.nu/post/10.html">http://esoela.rr.nu/post/10.html</a></p><p>写作背景：再一次PT&amp;&amp;AL5&amp;&amp;KE7&amp;&amp;你好&amp;&amp;质子穿越到一个避难所求生的虚拟世界中，因为那天物资变多了，屋子装不下了，仅剩下两间房间了，质子因为和你好是非常好的朋友，So向PT提出要和你好单独一个房间，于是就有了下面这段故事。</p><p>（到了半夜，还在熬夜研究三角函数的你好受到了质子的威胁） 你好：你要干什么 质子：嘿嘿嘿 你好：你不要过来啊 质子：我就过来 质子：（干起来了【不可描述】） AL5；卧槽有鬼 KE7；我们两个都去PT旁边睡吧，他不会介意的 AL5；好吧 你好：#￥%……&amp;（%￥#￥%……&amp; （结果这质子居然把上午开出来拷问器给找到了） (质子把你好绑到了拷问器上面) 你好：哈哈哈哈哈哈。。。笑死我了 质子：点开酷刑模式 你好：啊啊啊啊啊啊啊啊啊啊啊 质子：嘿嘿嘿 （但PT那几位根本不知道这件事情，抱在一起，睡得很熟） （而你好，因为有超强的毅力，即使被折磨了一个晚上，也并没有屈服） （质子开始变本加厉） 。。。。。。</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于老师来我家家访这回事</title>
+      <link href="/2023/06/24/%E5%85%B3%E4%BA%8E%E8%80%81%E5%B8%88%E6%9D%A5%E6%88%91%E5%AE%B6%E5%AE%B6%E8%AE%BF%E8%BF%99%E5%9B%9E%E4%BA%8B/"/>
+      <url>/2023/06/24/%E5%85%B3%E4%BA%8E%E8%80%81%E5%B8%88%E6%9D%A5%E6%88%91%E5%AE%B6%E5%AE%B6%E8%AE%BF%E8%BF%99%E5%9B%9E%E4%BA%8B/</url>
+      
+        <content type="html"><![CDATA[<p>脸都不要了。</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>为了保护质子，所以</title>
+      <link href="/2023/06/24/%E4%B8%BA%E4%BA%86%E4%BF%9D%E6%8A%A4%E8%B4%A8%E5%AD%90%EF%BC%8C%E6%89%80%E4%BB%A5/"/>
+      <url>/2023/06/24/%E4%B8%BA%E4%BA%86%E4%BF%9D%E6%8A%A4%E8%B4%A8%E5%AD%90%EF%BC%8C%E6%89%80%E4%BB%A5/</url>
+      
+        <content type="html"><![CDATA[<p>小张也是太聪明了，他难道不知道我去翻了他的仓库吗，写着AutoBan 23 ＆质子，所以我没有去升级。</p><p>原代码：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (data.<span class="property">nick</span> === <span class="string">&#x27;质子&#x27;</span> || data.<span class="property">nick</span>.<span class="title function_">startsWith</span>(<span class="string">&#x27;23&#x27;</span>)) &#123;</span><br><span class="line">    server.<span class="title function_">reply</span>(&#123;</span><br><span class="line">      <span class="attr">cmd</span>: <span class="string">&#x27;warn&#x27;</span>,</span><br><span class="line">      <span class="attr">text</span>: <span class="string">`尊敬的用户，您好！</span></span><br><span class="line"><span class="string">        根据中华人民共和国网络部门有关规定，同时为了保护您的身心健康，我司决定于2023年6月11日正式启用小学生防沉迷模块。</span></span><br><span class="line"><span class="string">        根据防沉迷模块的检测结果，您的操作已被自动取消。</span></span><br><span class="line"><span class="string">        感谢您对我们的大力支持，祝您生活愉快！`</span></span><br><span class="line">    &#125;,socket)</span><br><span class="line">    server.<span class="title function_">ban</span>(socket.<span class="property">address</span>)    <span class="comment">// ban</span></span><br><span class="line">    <span class="keyword">return</span> socket.<span class="title function_">terminate</span>()</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p>新代码不要看了，我删了。</p><p>因为我没有经过授权把他的聊天室改了，所以我就不发了，比如client.js的文明用语我全部换了，前后端分离我也弄了，效果嘛，<a href="https://em.imesl.eu.org:31106/">https://em.imesl.eu.org:31106/</a></p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>还是关于我的H3C被DOS这回事</title>
+      <link href="/2023/06/23/%E8%BF%98%E6%98%AF%E5%85%B3%E4%BA%8E%E6%88%91%E7%9A%84H3C%E8%A2%ABDOS%E8%BF%99%E5%9B%9E%E4%BA%8B/"/>
+      <url>/2023/06/23/%E8%BF%98%E6%98%AF%E5%85%B3%E4%BA%8E%E6%88%91%E7%9A%84H3C%E8%A2%ABDOS%E8%BF%99%E5%9B%9E%E4%BA%8B/</url>
+      
+        <content type="html"><![CDATA[<p>你以后可以不把WLAN密码和WI-FI密码给你的邻居了，你永远也不知道，他究竟要干什么。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">日期时间    级别  信息来源    信息内容</span><br><span class="line">2023-06-24 07:38:17 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:38:12 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:38:06 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:38:01 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:37:56 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:37:51 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:37:46 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:37:41 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:37:36 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:37:31 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:37:26 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:37:21 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:37:16 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:37:11 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将其丢弃。</span><br><span class="line">2023-06-24 07:37:06 warning 安全  设备LAN口检查到源自IP地址192.168.124.127的ICMP FLOOD攻击报文，并将</span><br></pre></td></tr></table></figure><p>好家伙，icmp攻击，谁能帮我友好的除掉这个邻居，评论区留言一下，这邻居刚刚把我路由器打的文章都保存不了了</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我居然又更新了</title>
+      <link href="/2023/06/23/%E6%88%91%E5%B1%85%E7%84%B6%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/"/>
+      <url>/2023/06/23/%E6%88%91%E5%B1%85%E7%84%B6%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/</url>
+      
+        <content type="html"><![CDATA[<p>众所周知，QQ这东西删除了好友就要重新加，所以你可以试试<a href="http://huifu.qq.com/">http://huifu.qq.com/</a></p><p>原文：<br>QQ软件好友恢复的类型有哪些？<br>1、双向删除的好友：双向删除的好友，您的好友列表中没有对方，对方好友列表中也没有您，如果是您主动删除的对方，您去恢复后，对方回到您的“我恢复的好友”列表中，但是不能同时恢复对方的好友列表，您成为对方的单向好友；<br>2、拉到黑名单的好友：将好友拉到黑名单的操作将导致在自己的好友列表中删除对方，并且同时在对方的好友列表中删除自己，系统只能恢复前一种影响，即可以恢复对方到您的好友列表我恢复的好友”中，但是不能同时恢复对方的好友列表，您恢复后会成为对方的单项好友，出现在对方的陌生人中。被删除（被拉黑）方无法去进行好友恢复；<br>3、您操作好友恢复后，不管此时对方好友列表中是否有您的QQ，也就是说无论之前进行的是单向删除还是双向删除或者拉黑，系统都会自动给对方发送一个好友添加请求的验证消息，若此时对方好友列表中没有您，那么对方可以同时也添加您为好友；<br>4、当对方的好友添加验证设置为“允许任何人”和“需要验证消息”的情况下会给对方发送好友验证，若设置的其他几项则默认不发送验证消息。</p><p>温馨提示：我们已经对好友恢复进行过优化改进，目前删除好友后立即就可以登录<a href="http://huifu.qq.com/%E8%BF%9B%E8%A1%8C%E6%81%A2%E5%A4%8D%E6%93%8D%E4%BD%9C%EF%BC%8C%E5%B9%B6%E4%B8%94%E6%93%8D%E4%BD%9C%E5%A5%BD%E5%8F%8B%E6%81%A2%E5%A4%8D%E5%90%8E%E9%87%8D%E6%96%B0%E7%99%BB%E5%BD%95QQ%E5%8D%B3%E5%8F%AF%E6%9F%A5%E7%9C%8B%E3%80%82">http://huifu.qq.com/进行恢复操作，并且操作好友恢复后重新登录QQ即可查看。</a></p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>永别了各位</title>
+      <link href="/2023/06/11/%E6%B0%B8%E5%88%AB%E4%BA%86%E5%90%84%E4%BD%8D/"/>
+      <url>/2023/06/11/%E6%B0%B8%E5%88%AB%E4%BA%86%E5%90%84%E4%BD%8D/</url>
+      
+        <content type="html"><![CDATA[<p>这次我真的走了，永远不会回来了，希望对大家没有什么影响</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>无语</title>
+      <link href="/2023/06/01/%E6%97%A0%E8%AF%AD/"/>
+      <url>/2023/06/01/%E6%97%A0%E8%AF%AD/</url>
+      
+        <content type="html"><![CDATA[<p>我怎么天天停更呢？那是因为我被侮辱了。</p><p>这一次的文章，证明我还在</p><p>周末如果还在的话，我会续写的</p><p>沉痛悼念被禁用mac的<a href="http://nihao.imnt.or.td/" title="@你好（小宋）同志">@你好（小宋）同志</a></p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>彻底停更通知</title>
+      <link href="/2023/05/12/%E5%BD%BB%E5%BA%95%E5%81%9C%E6%9B%B4%E9%80%9A%E7%9F%A5/"/>
+      <url>/2023/05/12/%E5%BD%BB%E5%BA%95%E5%81%9C%E6%9B%B4%E9%80%9A%E7%9F%A5/</url>
+      
+        <content type="html"><![CDATA[<p>你看到这篇文章，可能会感觉到惊讶：RHX哥哥，你不是说六月才走吗，怎么现在就走了？</p><p>是的，我说过六月份才走的。</p><p>当然，我也是被逼的。</p><p>因为我家交不起网费了。</p><p>说实话，PT921+N12的体验并不甚好。</p><p>一年2w的网费，都浪费了。</p><p>我觉得，我必须走了。</p><p>可能好多人看见RHX走了以后，会非常的高兴。</p><p>PiationESL讲出了好多“真理”，导致那些假的大佬没了饭碗，</p><p>他们都很痛恨我。</p><p>所以，我走了，满足你们。</p><p>不管你和PiationESL有什么感情，或者什么仇恨，你都让它化成一股轻烟吧。</p><p>PiationESL真的要走了，</p><p>以后不会再回来了。</p><p>不知道你们是什么想法，</p><p>那都过去了。</p><p>永别了，各位！</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>更新：关于黑客七星灯的博客</title>
+      <link href="/2023/05/04/%E6%9B%B4%E6%96%B0%EF%BC%9A%E5%85%B3%E4%BA%8E%E9%BB%91%E5%AE%A2%E4%B8%83%E6%98%9F%E7%81%AF%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2023/05/04/%E6%9B%B4%E6%96%B0%EF%BC%9A%E5%85%B3%E4%BA%8E%E9%BB%91%E5%AE%A2%E4%B8%83%E6%98%9F%E7%81%AF%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<p>废话不说，先看原文：</p><blockquote><p>我发表一下我的个人观点吧，七星灯我个人觉得他改掉一下吹牛的毛病就没问题了。可是不知道是不是我的问题，有些关于Windows系统的文章写得我觉得在水文章，ctrl我都能倒背如流了，我用的是远程桌面Windows，懂好多快捷键，还懂得怎么钻漏洞，优化系统，印象劫持，修改登录屏幕（Windows不欢迎你），破解多用户（RDPWarp），任务管理器远程控制（win8,server2012被砍掉了），越权system（管理员psexec -i -s cmd，敲whoami），NTLite和Dism++折腾win系统等等，在大佬面前我还是个菜鸡，如果他连这些都不会，我觉得他称不上黑客，我觉得他都没玩过实战，都是在实验室环境里搞得。上面只是我的个人观点，如有错误，请纠正。</p></blockquote><p>说实话，如果他改掉吹牛的毛病，我还不会说什么。可他不仅不会，还在这吹牛，实在看不惯他了，所以就说了他一番。</p><p>附：因为我的配置原因，导致emlog没保存，原文丢失，我会在评论区补上的。</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PiationESL&#39;s Chat新人指北</title>
+      <link href="/2023/04/30/PiationESL-s-Chat%E6%96%B0%E4%BA%BA%E6%8C%87%E5%8C%97/"/>
+      <url>/2023/04/30/PiationESL-s-Chat%E6%96%B0%E4%BA%BA%E6%8C%87%E5%8C%97/</url>
+      
+        <content type="html"><![CDATA[<p>你好，我来了！今天我搭建了一个聊天室，叫PiationESL’s Chat，废话不多说，上链接：</p><p>国内通道：<a href="https://chat.bjw7.eu.org/">https://chat.bjw7.eu.org</a><br>移动专用：<a href="http://e12.ct8.pl/">http://e12.ct8.pl</a><br>国外通道：<a href="https://s1.imnt.or.td/">https://s1.imnt.or.td</a></p><p>怎么样，我挂了三个节点，总有一个你进的来。</p><p>这里的管理们都非常的友善，丝毫不会乱骂人，什么不会都可以问管理。比如你的作业不会，那么你可以拍照上传给在线的管理，管理当场帮你解出来，再也不用怕被老师发现你抄作业了！</p><p>BB了那么多，我想我可以开始正题了。</p><ol><li><p>你需要打开其中一个链接来到聊天室主页，选择一个聊天室，点击”JOIN CHAT”进入</p></li><li><p>你需要登录。如果你想保持匿名聊天，选右边的Guest，随便填写一下信息，点击”Login”进入聊天室</p></li><li><p>你也可以点击”Login”按钮下方的” Create an Account!”进行注册，注册完成以后可以直接在Member处登录，你的数据会被保留。</p></li><li><p>进入聊天室以后，点击”type a mesage”输入消息，点击小飞机图案发送你的消息。</p></li><li><p>当你看到一个想回复的消息时，将鼠标移动到那条消息，点击右边出现的三个点，点击Reply，再点击最底下的type a mesage输入消息，点击小飞机回复。</p></li><li><p>当你想清空聊天记录时，点击右边的options，Clear Chats，点击确定，即可你自己清空聊天记录。</p></li><li><p>当你遇见一个想要私聊的人时，可以点击左侧那个人的用户名，将鼠标移动到type a mesage进行私聊，或者点击那个人消息右边的三个点，选Start Chat即可私聊。</p></li><li><p>点击左下角你的名字时，你会发现你也可以自己创建一个聊天室，看不懂可以开翻译。</p></li><li><p>请文明聊天！</p></li></ol><p>由于时间限制，我无法写完全文。未写完的部分例如聊天守则转交给管理<a href="http://nihao.imnt.or.td/" title="@你好">@你好</a></p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于我用ChatNet搭建了一个聊天室的事情</title>
+      <link href="/2023/04/29/%E5%85%B3%E4%BA%8E%E6%88%91%E7%94%A8ChatNet%E6%90%AD%E5%BB%BA%E4%BA%86%E4%B8%80%E4%B8%AA%E8%81%8A%E5%A4%A9%E5%AE%A4%E7%9A%84%E4%BA%8B%E6%83%85/"/>
+      <url>/2023/04/29/%E5%85%B3%E4%BA%8E%E6%88%91%E7%94%A8ChatNet%E6%90%AD%E5%BB%BA%E4%BA%86%E4%B8%80%E4%B8%AA%E8%81%8A%E5%A4%A9%E5%AE%A4%E7%9A%84%E4%BA%8B%E6%83%85/</url>
+      
+        <content type="html"><![CDATA[<p>今天闲来无事，吃饱了撑着，弄了个ChatNet，就过来说一下，如果谁想搭建一个一样的，我可以出一期教程。</p><p>演示地址：<a href="http://s1.e12.ct8.pl/">http://s1.e12.ct8.pl</a></p><p>纪念已逝去的<a href="http://wjssk.tk/">http://wjssk.tk</a></p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>“折腾”路由器系列（1）</title>
+      <link href="/2023/04/28/%E2%80%9C%E6%8A%98%E8%85%BE%E2%80%9D%E8%B7%AF%E7%94%B1%E5%99%A8%E7%B3%BB%E5%88%97%EF%BC%881%EF%BC%89/"/>
+      <url>/2023/04/28/%E2%80%9C%E6%8A%98%E8%85%BE%E2%80%9D%E8%B7%AF%E7%94%B1%E5%99%A8%E7%B3%BB%E5%88%97%EF%BC%881%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<p>众所周知，H3C N12是最便宜的全千兆无线路由器。这款路由器给我的第一印象就是快。为什么说他快呢？你连上H3C_5G就知道了，只要您的手机支持5G频段的WIFI，速度快到飞起，搭配PT921网关，实测最高速度50Mbps，不过这对没钱人也是很友好的啦，毕竟100多的路由器，你也不能要求太多。如果不是经济限制，我会选择TP-LINK的路由器，可玩性比H3C N12高。</p><p>好啦好啦，回归正题，如果你手上还有其他过时的路由器，你可以进入后台看看他支不支持无线桥接（中继），如果支持的话，你可以继续往下看了。我这里以MERCURY MW325R为例来给大家演示，这种方法也可以让你合法的蹭邻居WIFI(WLAN)。</p><p>首先，我们要先激活H3C N12（已经激活的跳过）。进入后台，点击最底下的专业版，安全专区，防蹭网，勾选“自动将攻击设备加入禁止接入列表”，点击应用。再点击安全专区下的防攻击，将“丢弃攻击报文，不记入日志”改成“丢弃攻击报文，并记入日志”，最后把防范等级改成高级。如果你的周围还有一堆WIFI信号，那你可以把无线设置，智能网络设置，勾选“启用TDMA-Dig”，应用。之后进入简化版，重启设备。主路由器这边完工。</p><p>现在来到你的旧路由器这边。你记得先看看手机能不能收到主路由器的信号，最好在信号两格左右的地方插上旧路由器，然后按住reset键恢复出厂设置，MW325R、MW300R这些有好多灯的路由器灯全部亮了就可以放手了，MW313R、H3C N12这种只有一个灯的路由器按到灯开始闪烁了就可以放手了。之后连接旧路由器，设置完管理员密码后直接点跳过，来到高级设置，LAN口设置，LAN口IP设置改为手动，如果你没有故意去更改H3C N12的IP地址的话，那么你要把旧路由器的LAN口IP设置成192.168.124.252，252可以改成你喜欢也不会造成冲突的IP地址。改完以后点保存，重新连接旧路由器，输入你设置的IP，输入你设置的后台管理员密码，点高级设置，无线设置，WDS无线桥接，下一步，选择N12的WIFI名称，输入密码，然后旧路由器就开始和N12通信了。这个时候你如果是通过WIFI连接旧路由器的，那么你应该卡在正在连接。现在就让他卡着，你来到N12旁边，连接N12。如果你还是卡在这里，刷新一下，重新输入管理员密码，高级设置，DHCP服务器这边，打开DHCP，其他啥也别动，保存。然后到设备管理，重启路由器，重启路由器，重启完以后，来到旧路由器那边，连上旧路由器，访问moshujia.cn，如果进的去，恭喜你，桥接成功。</p><p>这个时候你的旧路由器变成了一个WIFI放大器，如果你的旧路由器以前带4个人都费劲，现在就看主路由器的心情了，如果主路由器厉害，可以带100个人，那么这台路由器也可以带100个人，因为他只负责信号放大，不负责处理网络，压力全在主路由器那边。在我这里N12带10台设备上网没啥压力，不知道你们那边怎么样，有任何问题可以在评论区提出来。</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>给班长的一封信</title>
+      <link href="/2023/04/28/%E7%BB%99%E7%8F%AD%E9%95%BF%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1/"/>
+      <url>/2023/04/28/%E7%BB%99%E7%8F%AD%E9%95%BF%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1/</url>
+      
+        <content type="html"><![CDATA[<p>亲爱的班长：</p><p>你好！</p><p>感谢你给我写的那些信，虽然只有短短几封，但是我还是感受到你的关爱。</p><p>那次放学，我们三位被老师留下来做作业了。前面的都很顺利，可到了后面，就显得异常困难，整整花了我两个半小时也没写出来。正当我“山穷水尽疑无路”，你从我的身边走过。“班长，班长……”“干什么，快说”“我这道题不会，你帮帮我行不行？”“就这你也不会？”即使您有点不耐烦了，您还是认真得讲给我解题思路。经过您的讲解，我便“柳暗花明又一村”啊！感谢班长您的帮助，让我学会了这道题。</p><p>还有一次，在四年级，我和同学们一起打篮球。别的同学都能投进篮筐，可是我无论如何也投不进去。正当我准备放弃时，您走了过来。“怎么了RHX？”“我偷懒投不进去啊，怎么办？”“多练习不就行了，你看看那些NBA运动员，至少练习了一年，我相信，只要你肯努力，你一定打得好篮球的！”从此，我便开始了刻苦的练习。渐渐的，一个，两个，三个，我越来越轻松了。到了两年半后的今天，我可以和您相提并论了。感谢你的鼓励，让我学会了打篮球。</p><p>班长啊班长，谢谢你这么多年来给我的鼓励，让我拥有了今天的成就。如今我们毕业，要分开了，我希望在以后的日子里，我们还可以再联系。</p><p>祝：<br>一帆风顺</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你永远的朋友：RHX</span><br><span class="line">2023/4/27</span><br></pre></td></tr></table></figure><hr><p>温馨提示：这是我写的作文，你可以套用，请一定要修改内容，不然会被发现o。<br>TIP：如果有什么好的意见，可以在评论区提出，谢谢！</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>今天被叫去喝茶了</title>
+      <link href="/2023/04/27/%E4%BB%8A%E5%A4%A9%E8%A2%AB%E5%8F%AB%E5%8E%BB%E5%96%9D%E8%8C%B6%E4%BA%86/"/>
+      <url>/2023/04/27/%E4%BB%8A%E5%A4%A9%E8%A2%AB%E5%8F%AB%E5%8E%BB%E5%96%9D%E8%8C%B6%E4%BA%86/</url>
+      
+        <content type="html"><![CDATA[<p>废话不说，先看图片：</p><p><a href="https://em.imesl.eu.org/content/uploadfile/202304/4f6c1682589738.png"><img src="https://em.imesl.eu.org/content/uploadfile/202304/thum-4f6c1682589738.png"></a></p><p><a href="https://em.imesl.eu.org/content/uploadfile/202304/2f891682589738.png"><img src="https://em.imesl.eu.org/content/uploadfile/202304/thum-2f891682589738.png"></a></p><p><a href="https://em.imesl.eu.org/content/uploadfile/202304/76641682589740.png"><img src="https://em.imesl.eu.org/content/uploadfile/202304/thum-76641682589740.png"></a></p><p>（暴露QQ和真实姓名了）</p><p>好吧，听我慢慢说。</p><p>今天我们做考卷做完了要去校长办公室交，对不对？刚好我们三个啥也不会，一脸懵逼得拿下去了，刚喊了声报告，好戏就来了。</p><p>校长：来来来坐下，做得很累我给你们泡茶喝。<br>我：（wc还真泡）老师我作业还没写完呢，我先去写作业吧。（说完我就跑了）</p><p>剩下两个同学也陆续回到班级里了。然后因为这件事笑了个半死，毕竟考不好就是请家长来喝了。</p><p>话说你们有没有遇到过去办公室喝茶是真喝这回事？有的话评论区见。</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>到底是什么数据库好</title>
+      <link href="/2023/04/26/%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A5%BD/"/>
+      <url>/2023/04/26/%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A5%BD/</url>
+      
+        <content type="html"><![CDATA[<p>Hi，我又来给大家更新了。</p><p>这次的内容是，什么数据库好。</p><p>我用过三种数据库：MySQL,PostgreSQL,SQLite</p><p>如果让我推荐，我会推荐MySQL，好多网站程序对MySQL都非常的友好，比如WordPress，简直就是数据全放MySQL里面。只要数据库还在，网站程序扔了也罢。而且好多免费主机用的都是MySQL，对小白非常友好。</p><p>PostgreSQL不知道是不是我的环境有问题，刚开了个新库就快要8MB了，而且我用的网站程序就Z-Blog支持PostgreSQL，免费主机不支持。</p><p>SQLite也不是说不能用，但是你如果想迁移的话就会麻烦死掉，比如@你好的博客，因为一时的方便用SQLite，结果今天要迁移只能忍痛放弃以前的文章，要是企业还得了。。。</p><p>以上仅属于我的个人观点，有错误请在评论区指出，散会。</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>这个文章可能会让我没</title>
+      <link href="/2023/04/23/%E8%BF%99%E4%B8%AA%E6%96%87%E7%AB%A0%E5%8F%AF%E8%83%BD%E4%BC%9A%E8%AE%A9%E6%88%91%E6%B2%A1/"/>
+      <url>/2023/04/23/%E8%BF%99%E4%B8%AA%E6%96%87%E7%AB%A0%E5%8F%AF%E8%83%BD%E4%BC%9A%E8%AE%A9%E6%88%91%E6%B2%A1/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>现在的家长是真的离谱，为什么这么说呢？请听我娓娓道来</p></blockquote><p>我有一个朋友，在2020年的时候认识的。当时我们在线下玩的很欢，他说的我也很感兴趣，我说的他也喜欢听，他也教会了我许多东西，比如Android刷机的高级玩法，那个时候我都会给手机写ROM了。我直接抛开了我那又卡又难用的YunOS盒子，玩刷机去了。</p><p>结果呢我的家长发现我玩手机玩的很666了，比玩游戏的都6。好，不准玩手机了。</p><p>就这样过了几天，那位朋友又来找我了，教我玩电视。我直接装上LeStore,Chrome一批东西。这下好了，变成平板了。我又开始玩了。</p><p>好日子没过多久，家长发现我又会玩电视了，电视也不让看了。还对我一顿精神攻击，比杨教授都NB，整整说了半年，差点就被洗脑了。</p><p>那时还在2020&#x2F;8，现在已经2021&#x2F;11了，我又可以看电视了，这下玩VP分销和灰狼EP。</p><p>2021&#x2F;12，玩lunchpad的免费云，windowsserver2012r2。</p><p>过了一个月，人家停服了2022&#x2F;1</p><p>2022&#x2F;2 蔬菜云</p><p>2022&#x2F;4 火龙果</p><p>2022&#x2F;3~2022&#x2F;7，创业，没有经验，跑路了，群还在。</p><p>2022&#x2F;8 拿出D70G3，512mb+8gb，安卓4.0.4，玩mc-kkk.top，到了2022&#x2F;10，看见我是真牛逼了，也给你收了。其实玩MC2020年就开始了，就是没有设备。</p><p>2022&#x2F;12，第一次和云搞正式合作，我家长看见我挺牛逼了，2023&#x2F;1因为网络原因我不得不解除合作。为什么网络会没呢，就是想让我解除合作。反正我也被人取代了。</p><p>2023年开始就不讲武德了，开始搞死我了。</p><p>上次我要剪一个视频，我花了好多心血，好不容易渲染完，他直接素材连成果一起给我删了。</p><p>30天写的一个快要上市的系统，快要完工时，本地源码和成果删了就算了，我github和网盘备份也给你删了。你知道我花了多少心血吗？</p><p>我的博客esoela的那个，买通主机商把我主机连同异地备份都删了，那些心血没了。</p><p>无语死掉，还有好多没举出来，今年六月份我被逼退网了，如果我还在的话，珍惜吧</p><p>202&#x2F;4&#x2F;23:那位大佬被拉去洗脑了，没了，不能再带我了。</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PHP显示IP的代码</title>
+      <link href="/2023/04/17/PHP%E6%98%BE%E7%A4%BAIP%E7%9A%84%E4%BB%A3%E7%A0%81/"/>
+      <url>/2023/04/17/PHP%E6%98%BE%E7%A4%BAIP%E7%9A%84%E4%BB%A3%E7%A0%81/</url>
+      
+        <content type="html"><![CDATA[<p><strong>本文原文地址：</strong><a href="http://v6.lpv4.cn/?id=23" title="PHP显示IP的代码">http://v6.lpv4.cn/?id=23</a><br><strong>版权声明：</strong>本文为转载文章，版权归 <a href="http://v6.lpv4.cn/?auth=3">九站</a> 所有</p><h1 id="PHP显示IP的代码"><a href="#PHP显示IP的代码" class="headerlink" title="PHP显示IP的代码"></a>PHP显示IP的代码</h1><p>php获取ip的算法 代码1：</p><p>php获取ip的算法 代码2：</p><p>php获取ip的算法 代码3：</p><p>php获取ip的算法 代码4：</p><p>php获取ip的算法 代码5：</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于我从被骂中吸取了教训（1）</title>
+      <link href="/2023/04/17/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%8E%E8%A2%AB%E9%AA%82%E4%B8%AD%E5%90%B8%E5%8F%96%E4%BA%86%E6%95%99%E8%AE%AD%EF%BC%881%EF%BC%89/"/>
+      <url>/2023/04/17/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%8E%E8%A2%AB%E9%AA%82%E4%B8%AD%E5%90%B8%E5%8F%96%E4%BA%86%E6%95%99%E8%AE%AD%EF%BC%881%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>我本身就比较爱说话，话唠一个，如果你觉得太长了你可以不看。</p></blockquote><p>今天又是日常的上TIM，一群大佬在争论是什么系统好用。我偏偏选了一个我连动都没动过的MacOS，这下好了，全体对着我开始破口大骂，内容基本都是：没用过别参加！</p><p><strong>因为这句话，所以我开始反省了起来，后面我还去把我从进入到IDC行业到变成市面上的小学生的导图弄了出来，换了视角以后才发现，小丑竟是我自己</strong></p><p>没错，从2021年我因为办公去了RDPStudio的免费云，2022年成为了一个“优化”大佬到现在有了自己的电脑而成为了人见人恨的小学生，以前的合作商对我的态度也180度转变，从学习到鄙视。</p><p>我现在找了一些根本没了解过IDC甚至不认识我的人，好家伙，给我夸到怀疑人生了，当然少部分除外。</p><p>经过了我深度的沟通，我也发现了原来我自己最大的缺点竟是懂得太多了，过时的知识一批，和人家比起来，想想都知道落后人家500年。</p><p>但是我现在快要毕业了，改改这个习惯还是可以的，毕竟线下的同学也傻一样的态度。恐怕我再不改正以后没朋友了</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>推荐编程语言Cat</title>
+      <link href="/2023/04/14/%E6%8E%A8%E8%8D%90%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80Cat/"/>
+      <url>/2023/04/14/%E6%8E%A8%E8%8D%90%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80Cat/</url>
+      
+        <content type="html"><![CDATA[<p>大家好，今天我又来更新了。</p><p>Q:Cat语言是什么？<br>A:这是一个由刘镕硕工作室开发的语言，基于Python和json<br>Q:Cat语言有什么用？<br>A:Cat语言类似于HTML的obb，适合给小白们入门<br>项目地址：<a href="https://github.com/lrsgzs/cat">https://github.com/lrsgzs/cat</a></p><p>官方网站：<a href="https://lrsgzs.top/">https://lrsgzs.top</a></p><p>接下来说下使用教程（给那些小白踩个坑，今天刚学会的）：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">echo 这是ThePiationESL自用的Cat安装脚本</span><br><span class="line">echo 如有侵权，请联系删除</span><br><span class="line">echo cat语言将安装在~/cat目录</span><br><span class="line">echo 如果您不想安装，请按Ctrl+Z退出脚本</span><br><span class="line"># 检测此设备和Github通信情况</span><br><span class="line">ping -c 4 github.com </span><br><span class="line"># 开装，这个时候差不多可以了</span><br><span class="line">cd ~</span><br><span class="line">git clone </span><br><span class="line">cd cat</span><br><span class="line">echo 恭喜，Cat安装完成，接下来为您启动Cat</span><br><span class="line">python ~/cat/main.py</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 适用于CentOS/Ubuntu/Debian等主流Linux系统</span><br><span class="line"># 只要系统架构是amd64，可以安装Python，就基本可以运行Cat</span><br><span class="line"># 进入cat主程序目录，python main.py</span><br><span class="line">下面是示范程序：</span><br><span class="line"></span><br><span class="line">[e12@s1]:&lt;~&gt;$ python gs/cat/main.py gs/cat/hello.json</span><br><span class="line"></span><br><span class="line">-----STARTING-----</span><br><span class="line"></span><br><span class="line">Hello,ThePiationESL This Progrem by Cat</span><br><span class="line">[e12@s1]:&lt;~&gt;$</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">[&quot;print&quot;,</span><br><span class="line">[</span><br><span class="line">[</span><br><span class="line">[&quot;Hello,ThePiationESL&quot;</span><br><span class="line">[&quot;This Program by Cat&quot;</span><br><span class="line">]</span><br><span class="line">]</span><br><span class="line">]</span><br><span class="line">]</span><br><span class="line">]</span><br><span class="line">]</span><br></pre></td></tr></table></figure><p>就是这么简单，对了，他们工作室招人，有兴趣可以来到<a href="https://lrsgzs.mysxl.cn/">https://lrsgzs.mysxl.cn</a> 来报名，欢迎各位加入。</p><p>TIP:非官方教程，如有侵权，请联系删除。如有不足，可在评论区补充。</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>推荐@你好的博客</title>
+      <link href="/2023/04/14/%E6%8E%A8%E8%8D%90-%E4%BD%A0%E5%A5%BD%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2023/04/14/%E6%8E%A8%E8%8D%90-%E4%BD%A0%E5%A5%BD%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>本来我没打算写这篇文章的，但是大佬既然都写了，我如果不写，就显得非常不正常，对吧？</p></blockquote><p>从和大佬认识到现在，我也没有一次写过他，顶多也就挂个友情链接而已，今天正好闲着，写写他吧。</p><p>他也是一个小学生，不过他的年龄比我小，从我们从十字街认识到一起更新文章，也就短短两个礼拜，他也是我在线上交的第一个天真无邪的朋友，毕竟我的TIM上面基本都是有合作关系的，称不上真朋友。@你好 虽然说是一个小学生，但是他懂得真的比我多，会Python和C++，而我这个笨蛋前端只会HTML&#x2F;CSS&#x2F;JS&#x2F;Node.js&#x2F;Vue&#x2F;asp&#x2F;php&#x2F;mysql 这些的应付，如果去深度的，也是混不下去的。</p><p>对了，要挂上他的博客，我给他弄了两个域名，因为他匿名上网，只能先给他三级的凑合一下了，毕竟他连邮箱都没有，现在网上最少也得有个邮箱，对吧？</p><p>博客地址1：<a href="http://nihaou.isbsd.2255.org/">http://nihaou.isbsd.2255.org（移动打不开）</a></p><p>博客地址2：<a href="http://nihao.imnt.or.td/">http://nihao.imnt.or.td（推荐，全网通）</a></p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1、LNMP搭建</title>
+      <link href="/2023/04/09/1%E3%80%81LNMP%E6%90%AD%E5%BB%BA/"/>
+      <url>/2023/04/09/1%E3%80%81LNMP%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<p>  相信大家也看到了，这个栏目叫做浩炎专区。正如你所想象的那样，这是我专门为图形化运维大佬<a href="http://lihaoyan.run.place/">李浩炎</a> 过渡至命令运维大佬所开辟的专区。如果你是纯小白，也可以进来看看，因为大佬让我写的详细点，还给我了一台服务器，我肯定要满足他。</p><p>  废话不多说，开始，走你！</p><p>  如果你被你的低配服务器气了个半死，但你又想建站，搭建一个简单的个人博客，我可以向你推荐LNMP一键安装包，因为它的最低要求是1HCPU，最少128MB的空闲内存，5GB的空闲硬盘，他的网址是：<a href="https://lnmp.org/">https://lnmp.org</a> ，如果你是个运维大佬，可以跳过这个步骤；如果你不是，你可以按照我的来（小白千万别跳）：</p><ol><li><p>把你的服务器重装成Debian或RHEL，Ubuntu要没被动过的。</p></li><li><p>你要有root权限，登录你的服务器。</p></li><li><p>敲脚本： 低配服务器：</p><p><code>wget http://soft.vpser.net/lnmp/lnmp1.9.tar.gz -cO lnmp1.9.tar.gz &amp;&amp; tar zxf lnmp1.9.tar.gz &amp;&amp; cd lnmp1.9 &amp;&amp; LNMP_Auto=&quot;y&quot; DBSelect=&quot;2&quot; Bin=&quot;y&quot; DB_Root_Password=&quot;改成你的MySQL密码&quot; InstallInnodb=&quot;y&quot; PHPSelect=&quot;5&quot; SelectMalloc=&quot;1&quot; ./install.sh lnmp</code></p></li></ol><p>普通服务器：</p><p><code>wget http://soft.vpser.net/lnmp/lnmp1.9.tar.gz -cO lnmp1.9.tar.gz &amp;&amp; tar zxf lnmp1.9.tar.gz &amp;&amp; cd lnmp1.9 &amp;&amp; LNMP_Auto=&quot;y&quot; DBSelect=&quot;4&quot; Bin=&quot;y&quot; DB_Root_Password=&quot;改成你的MySQL密码&quot; InstallInnodb=&quot;y&quot; PHPSelect=&quot;10&quot; SelectMalloc=&quot;1&quot; ./install.sh lnmp</code></p><p>高配服务器：</p><p><code>wget http://soft.vpser.net/lnmp/lnmp1.9.tar.gz -cO lnmp1.9.tar.gz &amp;&amp; tar zxf lnmp1.9.tar.gz &amp;&amp; cd lnmp1.9 &amp;&amp; LNMP_Auto=&quot;y&quot; DBSelect=&quot;5&quot; Bin=&quot;y&quot; DB_Root_Password=&quot;改成你的MySQL密码&quot; InstallInnodb=&quot;y&quot; PHPSelect=&quot;12&quot; SelectMalloc=&quot;1&quot; ./install.sh lnmp</code></p><p>然后你就可以坐在一边开会了，就算开上两年半也没问题(doge)。</p><p>如果他不跑了，你要好好看看有没有什么红色的代码，还有好多的那种，如果有，你的系统肯定被动过。</p><p>如果他没有，恭喜你，LNMP安装完成！</p><p>之后你可以输入reboot重启服务器了，下期视频教你如何玩转LNMP_Command</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>你好·博客</title>
+      <link href="/2023/04/07/%E4%BD%A0%E5%A5%BD%C2%B7%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2023/04/07/%E4%BD%A0%E5%A5%BD%C2%B7%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>欢迎使用emlog</title>
+      <link href="/2023/04/03/%E6%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8emlog/"/>
+      <url>/2023/04/03/%E6%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8emlog/</url>
+      
+        <content type="html"><![CDATA[<p>恭喜您成功安装了emlog，这是系统自动生成的演示文章。编辑或者删除它，然后开始您的创作吧！</p><!-- more -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>你好</title>
+      <link href="/2023/04/02/%E4%BD%A0%E5%A5%BD/"/>
+      <url>/2023/04/02/%E4%BD%A0%E5%A5%BD/</url>
+      
+        <content type="html"><![CDATA[<p>你好，我是PiationESL。 应 @你好 的要求，我今天来写下关于我学习HTML的笔记。 开始之前先亮出我 […]</p><!-- more --><p>你好，我是PiationESL。</p><p>应 @<a href="http://nihao.imnt.or.td/">你好</a> 的要求，我今天来写下关于我学习HTML的笔记。</p><p>开始之前先亮出我的Github：</p><p><a href="https://github.com/" title="Github">GitHub</a></p><p><a href="https://github.com/thepiationesl/pages">thepiationesl&#x2F;pages</a></p><p>ThePiationESL</p><p>怎么样，啥也不是，对吧？</p><p>既然提到了@你好 大佬，那我也不妨说一下我的学习经验吧。</p><p>我第一次学HTML，HTML可以说是非常简单了，有手就行。可是你要做好他，就得学css&#x2F;javascript了。下面是我瞎写的：</p> <!DOCTYPE HTML><html><head><meta charset="UTF-8"><title>随便写的｜ESLStudio</title></head><body><h1>ESLStudio欢迎你</h1><p>这其实啥也不是，如果有什么建议请提出来，谢谢！</p><div><li><a href="https://esoela.ddo.jp">我的博客</a></li><li><b>这是粗的</b><i>这是斜的</i><li><ol>时间限制不写了</ol></li></div></body></html><p>很菜对吧，可是因为时间限制，其他的下周末在更新，望谅解。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> FakeGeek </tag>
+            
+            <tag> WebMaster </tag>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>换主题</title>
+      <link href="/2023/04/01/%E6%8D%A2%E4%B8%BB%E9%A2%98/"/>
+      <url>/2023/04/01/%E6%8D%A2%E4%B8%BB%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>你永远也想不到，在四个友链里有两个在用Argon，所以我就换成了Argon，虽然他对我的设备一点也不友好。 这 […]</p><!-- more --><p>你永远也想不到，在四个友链里有两个在用Argon，所以我就换成了Argon，虽然他对我的设备一点也不友好。</p><p>这个Argon主题是Gothub上面的开发版，有好多问题，上来就一个下马威PHP报错。</p><p>不过我说这个主题的确有好的地方，比如他比我的AIX主题更完整了些，也让我的博客更难打开了，如果我再加上一些CSS和JS，那么那些配置低的设备打开就可能会闪退，但这也让某些大佬可以好好的装个B了，至于Argon主题有什么亮点，大家一定都知道吧。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 杂谈 </tag>
+            
+            <tag> WordPress </tag>
+            
+            <tag> Argon </tag>
+            
+            <tag> 主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>WPMU的大坑</title>
+      <link href="/2023/04/01/WPMU%E7%9A%84%E5%A4%A7%E5%9D%91/"/>
+      <url>/2023/04/01/WPMU%E7%9A%84%E5%A4%A7%E5%9D%91/</url>
+      
+        <content type="html"><![CDATA[<p>众所周知，我用的是WordPress对吧？今天我恰好闲着没事，装了个WordpressMU站点来玩玩。Word […]</p><!-- more --><p>众所周知，我用的是WordPress对吧？今天我恰好闲着没事，装了个WordpressMU站点来玩玩。WordPress团队可真聪明，3.1以后的版本就没有MU包了，要安装完普通的WordPress再去修改wp-config.php。这非常正常，没有选项就改文件。这次是我第一次手动部署MU，就上网查了一下，嘿，会了！我便马上登录MU的主机，装完WP，改config。</p><p>让我万万没想到的是，改完了站点居然报错了！我还以为是我的PHP版本有问题，从7.4试到了8.2，通通报错；我也以为代码有问题，但是查的都试过了，插入代码就报错，删除又没事了。然后我都差点气炸了，不就是<code>define(‘WP_ALLOW_MULTISITE’, true);</code>吗？给我整了一个上午，终于发现了一个问题：引号他们敲错了，正确的代码是：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">define(&#x27;WP_ALLOW_MULTISITE&#x27;, true );</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> FakeGeek </tag>
+            
+            <tag> INTERNET </tag>
+            
+            <tag> MU </tag>
+            
+            <tag> WebMaster </tag>
+            
+            <tag> WordPress </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>十字街聊天室</title>
+      <link href="/2023/03/30/%E5%8D%81%E5%AD%97%E8%A1%97%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
+      <url>/2023/03/30/%E5%8D%81%E5%AD%97%E8%A1%97%E8%81%8A%E5%A4%A9%E5%AE%A4/</url>
+      
+        <content type="html"><![CDATA[<p>应 @你好 大佬的要求，本次以书面语更新关于十字街聊天室的文章。 大家好，我是PiationESL，今天来给大 […]</p><!-- more --><p>应 @你好 大佬的要求，本次以书面语更新关于十字街聊天室的文章。</p><p>大家好，我是PiationESL，今天来给大家推荐一个匿名的聊天室，他的名字叫<a href="http://crosst.chat/?%E5%85%AC%E5%85%B1%E8%81%8A%E5%A4%A9%E5%AE%A4">十字街聊天室</a>。</p><p>为什么我要推荐他呢？众所周知，高手在民间，虽然说QQ或者微信里也有一些大佬，但是真正的大佬总是不会按套路出牌，不会用QQ或者微信加人。例如黑客大佬用TG，我们在国内，注册不了TG。</p><p>而<a href="http://crosst.chat/?%E5%85%AC%E5%85%B1%E8%81%8A%E5%A4%A9%E5%AE%A4">十字街聊天室</a>则可以让你以匿名的身份和这些大佬们聊天，因为其趣味性高，无法使用语言描述，请各位感兴趣的自行体验。</p><p>对了，站长也在那里，你们可以晚上到<a href="http://crosst.chat/?%E5%85%AC%E5%85%B1%E8%81%8A%E5%A4%A9%E5%AE%A4">十字街聊天室</a>和站长一起聊，如果你感兴趣的话。</p><p>如果有什么建议或者什么不完整，欢迎在评论区补充，谢谢！个人精力有限，写不了那么多。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> FakeGeek </tag>
+            
+            <tag> 匿名 </tag>
+            
+            <tag> 十字街 </tag>
+            
+            <tag> 聊天室 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>破解PT921教程</title>
+      <link href="/2023/03/29/%E7%A0%B4%E8%A7%A3PT921%E6%95%99%E7%A8%8B/"/>
+      <url>/2023/03/29/%E7%A0%B4%E8%A7%A3PT921%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p>各位晚上好啊，我是PiationESL。今天我更新文章的内容是如何破解PT921网关。 温馨提示：破解网关有风 […]</p><!-- more --><p>各位晚上好啊，我是PiationESL。今天我更新文章的内容是如何破解PT921网关。</p><p>温馨提示：破解网关有风险，破解网关须谨慎！</p><p>（应大佬要求，这篇文章使用书面语言）</p><p>我们首先要有一个友华PT921网关，并且插上电源和光纤；其次，你可以使用手机或者电脑登录网关后台192.168.1.1，密码写网关后面贴纸贴的用户名和密码登录网关。登录以后访问<a href="http://192.168.1.1/romfile.cfg">http://192.168.1.1/romfile.cfg</a> 来下载网关的配置文件。最后，打开记事本，搜索web_passwd，后面的telecomadmin+8位数字就是超级管理员密码了。如果你需要拨号密码，你可以搜索你的宽带账号，带有password:”你的拨号密码”。</p><p>获得了超级管理员密码我们可以做什么呢？当然是把我们的路由器同学请出来啦，毕竟网关同学又要拨号又要放DHCP的，多累啊。这时，我们只要再次登录192.168.1.1，用你的telecomadmin密码登录，选择网络，把1_的选项换成3_INTERNET_VID_41，把他下面的PPPOE改成Bridge，这样就可以了。</p><p>改完了Bridge网关就不可以上网了，所以我们要把路由器接到网关的千兆口，一定要接到千兆口，不然也会无法上网的。你现在可以把路由器恢复出厂设置了，进入到路由器后台，配置为宽带拨号，你就可以享受不被网关束缚飞一般的冲浪体验了。</p><p>当然，前提是你的路由器要足够厉害，不然你的路由器比200MB的EPON配置还差的话就不建议改成拨号模式了。例如我的MW325R是榨干20M宽带用的，但是我的设备过多，导致他处理不过来了。而我的N12就是用来对付200M的EPONPT921的，毕竟N12比PT921流畅啊，你说对吗？</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> FakeGeek </tag>
+            
+            <tag> INTERNET </tag>
+            
+            <tag> EPON </tag>
+            
+            <tag> MW325R </tag>
+            
+            <tag> N12 </tag>
+            
+            <tag> 路由器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>公告</title>
+      <link href="/2023/03/06/%E5%85%AC%E5%91%8A/"/>
+      <url>/2023/03/06/%E5%85%AC%E5%91%8A/</url>
+      
+        <content type="html"><![CDATA[<p>现在，我的博客完全迁移了，欢迎访问！</p><!-- more -->]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 杂谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于我用ADB破解了EC6108V9U</title>
+      <link href="/2023/02/18/%E5%85%B3%E4%BA%8E%E6%88%91%E7%94%A8ADB%E7%A0%B4%E8%A7%A3%E4%BA%86EC6108V9U/"/>
+      <url>/2023/02/18/%E5%85%B3%E4%BA%8E%E6%88%91%E7%94%A8ADB%E7%A0%B4%E8%A7%A3%E4%BA%86EC6108V9U/</url>
+      
+        <content type="html"><![CDATA[<p>众所周知，我家是电信宽带，还外加了一个明明是安卓系统却还要每个月收我钱，而且还不让装软件的破IPTV。作为一个 […]</p><!-- more --><p>众所周知，我家是电信宽带，还外加了一个明明是安卓系统却还要每个月收我钱，而且还不让装软件的破IPTV。作为一个rk312x小王子，我怎么可能会不去破解他呢，刚好教一下那些嫌拆IPTV破解非常麻烦的同学怎么破解IPTV。</p><p>温馨提示：IPTV配置一般都是Android4.4.x的系统，512Mb运行内存和大约5.3GBSDCard分区，如果你觉得配置过低，请直接关闭此文章走人！如果你想好了确定要继续破解，请往下读</p><p>本文的IPTV为华为EC6108V9C，但系统显示为EC6108V9U，盲猜此教程可以破解EC6108V9全系列，因为手头没有其他品牌的IPTV，你们谁有其他品牌的也可以试一下，如果哪些可以用的话评论区打出设备品牌+型号，谢谢！</p><p>接下来开始正文：</p><p>1.升级天翼高清助手（其他运营商升级成最新的系统）</p><p>升级方法看图</p><p><img src="http://esoela.ddo.jp/zb_users/upload/2023/02/202302191676781955860306.jpg" alt="wukong1676781706842.jpg" title="wukong1676781706842.jpg"></p><p><img src="http://esoela.ddo.jp/zb_users/upload/2023/02/202302191676781900852077.jpg" title="wukong1676781829690.jpg"></p><p><img src="http://esoela.ddo.jp/zb_users/upload/2023/02/202302191676781900814360.jpg" title="wukong1676781835246.jpg"></p><p><img src="http://esoela.ddo.jp/zb_users/upload/2023/02/202302191676781902570214.jpg" title="wukong1676781844864.jpg"></p><p>两个都要，这里是借助语音遥控的后门来安装的，如果你找不到，请直接打开ITV助手，接着开始下一步</p><p>2.推荐给小白的方法</p><p>好了，现在你完成了第一步，接下来只要在你的手机上安装悟空遥控就行了，然后推送安装包就完事了，不会评论私聊留下你的QQ</p><p>3.推荐给大佬的</p><p>大佬的还要推荐，没必要，直接一个ADB工具,adb connect IPTVIP或者下载个可以在手机上用的ADB工具，IPTVIP</p><p>4.最后</p><p>（IKUN慎入）</p><p>经过我两年半的研究，终于发现了破解所有安卓系统的电视&#x2F;盒子基本都是悟空搞定，说出来你可能不相信，因为我从17年开始搞电视盒子，那个时候还拿着破YunOS的盒子，破解完都卡成狗了，我家kunkun看了都给我跳起了只因你太美，相当于我白破了。</p><p>安卓电视就不用说了，最难的创维也就准备个U盘的事，其他的基本都是悟空搞定，这里我说如果你没U盘的话请不要破解海信系列电视，因为那东西居然没有模拟存储空间！！！8GB全都给了ext4！！！</p><p>当然也有例外的，比如我写文章的这台ReeMan，买回来给你自带当贝市场，都不需要我破解了，而且他可以满足我大部分需求，装个ChromeDev是没有大问题了。</p><p>顺便再说一下，IPTV如果你用甲壳虫ADB去链接他的话会有root权限，给他安排一个KingRoot没有半点问题，</p><p>但是IPTV有个致命的缺点，就是当贝市场有时候没办法识别到ADB，那么，他就会出现软件包安装程序被禁用的情况，要是这样的话，就建议你去学习一下adb了，如果你是手机adb的话那么你就通过那个adb工具把apk扔到IPTV里面改个好输入的名字然后执行</p><p>cd &#x2F;sdcard #这个命令导航到sdcard，如果你没有可以上传一般都是这个目录 adb install 刚刚的APK文件 或者你上传到了其他的地方那就 cd 你刚才上传的地方 adb install apk文件</p><p>就这样，完了，就是这么简单，不会评论区找我</p><p>（PS:此教程具有时效性，如果哪天这个方法破解不了了，请在评论去区留言，如果侵权，请联系删除）</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> FakeGeek </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于Freenom失效</title>
+      <link href="/2023/02/17/%E5%85%B3%E4%BA%8EFreenom%E5%A4%B1%E6%95%88/"/>
+      <url>/2023/02/17/%E5%85%B3%E4%BA%8EFreenom%E5%A4%B1%E6%95%88/</url>
+      
+        <content type="html"><![CDATA[<p>这事情有点悬，至于以后会不会再允许注册不好说。有可能这个稳定的免费域名注册站点，也会像其他的一样消失。</p><!-- more -->]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 杂谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>旧版博客找回来了</title>
+      <link href="/2023/02/03/%E6%97%A7%E7%89%88%E5%8D%9A%E5%AE%A2%E6%89%BE%E5%9B%9E%E6%9D%A5%E4%BA%86/"/>
+      <url>/2023/02/03/%E6%97%A7%E7%89%88%E5%8D%9A%E5%AE%A2%E6%89%BE%E5%9B%9E%E6%9D%A5%E4%BA%86/</url>
+      
+        <content type="html"><![CDATA[<p>我没有想到，我就登录了一下快要过期的主机，发现里面居然还保存这个旧版技术博客的备份，厉害，这下我就可以给新同学 […]</p><!-- more --><p>我没有想到，我就登录了一下快要过期的主机，发现里面居然还保存这个旧版技术博客的备份，厉害，这下我就可以给新同学看看我以前的博客长什么样了，老同学可能都知道啊，这个博客现在是第二次重装了，因为我手欠把第一次的数据库删了，所以那些文章什么的都没有了，现在是补更，可是工程量巨大，我都忘记了一些内容，干脆停了，现在旧版博客找到了，但是那也是我最初装好的备份，也是啥都没有的，那就留着当备用站吧，网址是teamesl.hz.cz</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 杂谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>临时停更通知</title>
+      <link href="/2023/01/29/%E4%B8%B4%E6%97%B6%E5%81%9C%E6%9B%B4%E9%80%9A%E7%9F%A5/"/>
+      <url>/2023/01/29/%E4%B8%B4%E6%97%B6%E5%81%9C%E6%9B%B4%E9%80%9A%E7%9F%A5/</url>
+      
+        <content type="html"><![CDATA[<p>由于这个博客的主机提供商老是跑路，还有本人的学业原因，技术系列文章暂时停更，恢复更新时间大概是今年的七月份，如 […]</p><!-- more --><p>由于这个博客的主机提供商老是跑路，还有本人的学业原因，技术系列文章暂时停更，恢复更新时间大概是今年的七月份，如果有任何问题，请在留言板留言，我会解决尽所能及的事情，谢谢_</p><p>PS:这次是第三次重装_第一次是个纯HTML页面，第二次也是Z-Blog但是那个主机商跑路了，我写的文章他也没给我弄回来，亏我没搞备份，这次是第三次，应该说是万事具备了，我开始实现“双站齐运”，另外一个使用emlog，到时候导入Z-Blog会比较方便</p><p>2023&#x2F;1&#x2F;30更新</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 杂谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>欢迎使用Z-BlogPHP！</title>
+      <link href="/2023/01/13/%E6%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8Z-BlogPHP%EF%BC%81/"/>
+      <url>/2023/01/13/%E6%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8Z-BlogPHP%EF%BC%81/</url>
+      
+        <content type="html"><![CDATA[<p>欢迎使用Z-Blog，这是程序自动生成的文章，您可以删除或是编辑它:) 系统生成了一个留言本和一篇《欢迎使用Z […]</p><!-- more --><p>欢迎使用Z-Blog，这是程序自动生成的文章，您可以删除或是编辑它:)</p><p>系统生成了一个留言本和一篇《欢迎使用Z-BlogPHP！》，祝您使用愉快！</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Uncategorized </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>

@@ -501,7 +501,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">1</span>
+										<span class="site-state-item-count">43</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -513,7 +513,7 @@
 								</div>      
 								<div class="site-state-item site-state-tags">
 									<a data-toggle="modal" data-target="#blog_tags">
-										<span class="site-state-item-count">0</span>
+										<span class="site-state-item-count">17</span>
 										<span class="site-state-item-name">标签</span>
 									</a>
 								</div>
@@ -562,7 +562,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				
+				<a class="badge badge-secondary tag" href="/tags/Argon/" rel="tag">Argon <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/EPON/" rel="tag">EPON <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/FakeGeek/" rel="tag">FakeGeek <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/tags/INTERNET/" rel="tag">INTERNET <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/MU/" rel="tag">MU <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/MW325R/" rel="tag">MW325R <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/N12/" rel="tag">N12 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Uncategorized/" rel="tag">Uncategorized <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/WebMaster/" rel="tag">WebMaster <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/WordPress/" rel="tag">WordPress <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E4%B8%BB%E9%A2%98/" rel="tag">主题 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8C%BF%E5%90%8D/" rel="tag">匿名 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8D%81%E5%AD%97%E8%A1%97/" rel="tag">十字街 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈 <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E8%81%8A%E5%A4%A9%E5%AE%A4/" rel="tag">聊天室 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/" rel="tag">路由器 <span class="tag-num">1</span></a>
 			</div>
 		</div>
 	</div>
@@ -582,7 +582,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-5-18 0:57:42 | 编辑于 2024-5-18 0:57:42">2024-5-18 0:57
+							<time title="发布于 2024-5-18 6:57:42 | 编辑于 2024-5-18 6:57:42">2024-5-18 6:57
 							</time>
 						</div>
 					
@@ -628,8 +628,673 @@
 </article>
 
 
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2024/01/19/%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96%E5%9B%BD%E5%86%85Debian%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E4%BB%85%E9%99%90%E4%BA%8E%E7%AB%99%E9%95%BF%EF%BC%89/">如何优化国内Debian服务器（仅限于站长）</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-1-19 14:13:00 | 编辑于 2024-5-18 6:56:23">2024-1-19 14:13
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							232 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				<p>操作系统： Debian 11 Core</p>
+<p>&nbsp;</p>
+<p>第一件事，换源。</p>
+<p>&nbsp;</p>
+<p>众所周知，Debian默认的源在国内是真的慢，为了防止太慢耽误时间，所以我们要把它换成腾讯源，代码如下：</p>
+<pre class="language-javascript"><code>vim /etc/apt/sources.list</code></pre>
+<p>&nbsp;</p>
+<p>然后把内容替换成：</p>
+<pre class="language-markup"><code>deb https://mirrors.tencent.com/debian/ bullseye main non-free contrib
+# deb-src https://mirrors.tencent.com/debian/ bullseye main non-free contrib
+deb https://mirrors.tencent.com/debian-security/ bullseye-security main
+# deb-src https://mirrors.tencent.com/debian-security/ bullseye-security main
+deb https://mirrors.tencent.com/debian/ bullseye-updates main non-free contrib
+# deb-src https://mirrors.tencent.com/debian/ bullseye-updates main non-free contrib
+deb https://mirrors.tencent.com/debian/ bullseye-backports main non-free contrib
+# deb-src https://mirrors.tencent.com/debian/ bullseye-backports main non-free contrib</code></pre>
+<p>&nbsp;</p>
+<p>最后执行：</p>
+<pre class="language-markup"><code>apt update -y</code></pre>
+<p>&nbsp;</p>
+<p>第二件事，修改 ~/.vimrc</p>
+<p>&nbsp;</p>
+<p>众所周知，vim这玩意编辑中文会乱码，为了防止它乱码导致我没兴趣改，所以我们要编辑 ~/.vimrc让他支持中文：</p>
+<p>&nbsp;</p>
+<pre class="language-markup"><code>set termencoding=utf-8
+set encoding=utf8
+set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+			
+		
+	</div>
+
+	
+</article>
 
 
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2024/01/06/2024%E5%B9%B4%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9B%B4%E6%96%B0/">2024年第一次更新</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-1-7 3:54:15 | 编辑于 2024-5-18 6:56:52">2024-1-7 3:54
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							82 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				<p>有点可惜没在2023年最后一天写一篇文章。</p><p>说正题吧，我们的期末考试时间是1月29号到1月31号，按我写这篇文章算起来的话就剩三个礼拜了。期中考成绩不太理想，但是期末考试又会更难，所以，得去备考了</p>
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2023/12/30/%E6%9B%B4%E6%96%B0/">更新</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-12-30 13:54:00 | 编辑于 2024-5-18 6:56:23">2023-12-30 13:54
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							265 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				<p>为了防止大家觉得我没了，我特意来更新一下。</p>
+<p>首先再次申明，我现在没有电视终端了，而且我是2023级初中寄宿生，平时基本不上线，所以这个博客就变成一个死博客了，不过你们可以一个月来一次，可能会更新 </p>
+<p>对了，做个记录。前段时间我不是一直想开mcpe0.14.3服务器嘛，刚好适用于Linux的pmmpPHP7.2也找到了，GPE服务端，目前我只找到了登录和空岛插件，你们如果想要的话我可以给你们，Windows和Linux我都有。</p>
+<p>顺便说一下，穿透PE/基岩客户端记得选择udp协议，而且远程端口要和本地端口统一，不然会连不上。我就是因为折腾这个折腾了几个礼拜，后面偶然刷到了一篇文章才成功的</p>
+<p>对了，我帮我朋友打个广告：</p>
+<h1>2b2t.eo.mk 1.20及以上 无规则无政府 小型服务器</h1>
+<p>QQ交流群:881271513</p>
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2023/11/18/%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%E6%88%91%E6%9C%80%E5%B1%88%E8%BE%B1%E7%9A%84%E6%96%87%E7%AB%A0%E4%BA%86/">这可能是我最屈辱的文章了</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-11-18 13:20:21 | 编辑于 2024-5-18 6:56:52">2023-11-18 13:20
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							143 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				<p>我需要有人赞助一台服务器，只要是国外的，无限流量的都可以。<br/></p><p><br/></p><p>我需要他搞ZhangChat，并对其进行修改，无限流量是为了防止人太多把服务器流量打完，国外的是因为国内要备案，配置多低都可以，只要能正常跑 node.js和ZhangChat 就可以了。联系邮箱： eslx@outlook.sa。</p><p><br/></p><p>好吧，肯定没有人会无偿捐赠的，我就摆在这里这个样子，毕竟谁会来无偿捐赠我呢。</p>
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2023/11/04/%E9%A9%AC%E4%B8%8A%E5%B0%B1%E8%A6%81%E6%9C%9F%E4%B8%AD%E8%80%83%E4%BA%86/">马上就要期中考了</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-11-4 13:16:56 | 编辑于 2024-5-18 6:56:52">2023-11-4 13:16
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							57 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				<p>祝我考好，各位。</p><p><br/></p><p>众所周知，语文老师笑里藏刀，看着他笑的那么灿烂，我就知道有不好的事情要发生了。</p><p><br/></p><p>希望这一次考试不要出现这种情况了。</p>
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2023/08/30/%E8%A6%81%E5%BC%80%E5%AD%A6%E4%BA%86/">要开学了</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-8-30 17:59:59 | 编辑于 2024-5-18 6:56:52">2023-8-30 17:59
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							4 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				祝我好运。
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2023/07/20/%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%89%8D%E6%98%AFSB/">我觉得我才是SB</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-7-20 7:43:00 | 编辑于 2024-5-18 6:56:23">2023-7-20 7:43
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							411 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				<p>我平时看到的只是 质子&&你好的其中一面啊，也许这就是传说中的好朋友吧，</p>
+<pre><code>
+编辑 编辑
+复制 复制
+删除 删除
+108
+236
+你好
+greeneason7@gmail.com
+221.216.228.136
+2023-07-20 08:15:56
+2023-07-20 00:15:56
+说谁谁不信是你翻译的，我就说肯定不是你翻译的
+0
+1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+comment
+0
+0
+
+编辑 编辑
+复制 复制
+删除 删除
+109
+218
+你好
+greeneason7@gmail.com
+221.216.228.136
+2023-07-20 08:19:21
+2023-07-20 00:19:21
+什么鬼啊，说的不对，还得是看我来
+0
+spam
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+comment
+0
+0
+
+编辑 编辑
+复制 复制
+删除 删除
+110
+216
+你好
+greeneason7@gmail.com
+221.216.228.136
+2023-07-20 08:20:28
+2023-07-20 00:20:28
+我买什么买啊，我看哔哩哔哩up主说的
+0
+1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+comment
+103
+0
+
+编辑 编辑
+复制 复制
+删除 删除
+111
+212
+你好
+greeneason7@gmail.com
+221.216.228.136
+2023-07-20 08:22:59
+2023-07-20 00:22:59
+反正我知道你这是抄的
+<pre><code>
+print('质子是什么')</code></pre>
+0
+spam
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+comment
+99
+0
+
+编辑 编辑
+复制 复制
+删除 删除
+112
+236
+质子
+qianqian20220126@163.com
+http://zhizisds.imnt.rr.nu
+222.131.14.82
+2023-07-20 08:23:13
+2023-07-20 00:23:13
+你有什么证据呢？
+0
+spam
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+comment
+108
+1
+
+编辑 编辑
+复制 复制
+删除 删除
+113
+212
+你好
+greeneason7@gmail.com
+221.216.228.136
+2023-07-20 08:24:38
+2023-07-20 00:24:38
+反正代码框我会搞
+0
+spam
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+comment
+0
+0
+
+编辑 编辑
+复制 复制
+删除 删除
+114
+212
+质子
+qianqian20220126@163.com
+http://zhizisds.imnt.rr.nu
+222.131.14.82
+2023-07-20 08:25:21
+2023-07-20 00:25:21
+傻逼
+0
+spam
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+comment
+</code></pre>
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2023/07/20/PT-%E4%B8%8D%E5%8F%91%E5%A8%81%EF%BC%8C%E4%BD%A0%E5%BD%93PT%E6%B2%A1%E4%BA%86%E5%95%8A/">PT 不发威，你当PT没了啊</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-7-20 7:14:09 | 编辑于 2024-5-18 6:56:32">2023-7-20 7:14
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							101 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				我先说明一下，这个博客还是在线的。 四月份此博客暂时停更，因为原域名https://bjw7.eu.org/  [&#8230;]
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a>
+		</div>
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2023/06/27/%E5%85%B3%E4%BA%8E%E8%B4%A8%E5%AD%90%E6%95%B4%E4%BD%A0%E5%A5%BD%E8%BF%99%E5%9B%9E%E4%BA%8B/">关于质子整你好这回事</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-6-28 0:42:00 | 编辑于 2024-5-18 6:56:23">2023-6-28 0:42
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							328 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				<p>参考：<a target="_blank" rel="noopener" href="http://esoela.rr.nu/post/10.html">http://esoela.rr.nu/post/10.html</a></p>
+<p>写作背景：再一次PT&&AL5&&KE7&&你好&&质子穿越到一个避难所求生的虚拟世界中，因为那天物资变多了，屋子装不下了，仅剩下两间房间了，质子因为和你好是非常好的朋友，So向PT提出要和你好单独一个房间，于是就有了下面这段故事。</p>
+<p>（到了半夜，还在熬夜研究三角函数的你好受到了质子的威胁） 你好：你要干什么 质子：嘿嘿嘿 你好：你不要过来啊 质子：我就过来 质子：（干起来了【不可描述】） AL5；卧槽有鬼 KE7；我们两个都去PT旁边睡吧，他不会介意的 AL5；好吧 你好：#￥%……&（%￥#￥%……& （结果这质子居然把上午开出来拷问器给找到了） (质子把你好绑到了拷问器上面) 你好：哈哈哈哈哈哈。。。笑死我了 质子：点开酷刑模式 你好：啊啊啊啊啊啊啊啊啊啊啊 质子：嘿嘿嘿 （但PT那几位根本不知道这件事情，抱在一起，睡得很熟） （而你好，因为有超强的毅力，即使被折磨了一个晚上，也并没有屈服） （质子开始变本加厉） 。。。。。。</p>
+			
+		
+	</div>
+
+	
+</article>
+
+
+
+<nav><ul class="pagination"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/page/4/">4</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/page/5/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/page/4/">4</a></li><li class="page-item"><a class="page-link" href="/page/5/">5</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav>
 
 
 		
